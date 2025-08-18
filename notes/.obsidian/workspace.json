@@ -1,0 +1,232 @@
+{
+  "main": {
+    "id": "2c606c9f5be400a3",
+    "type": "split",
+    "children": [
+      {
+        "id": "f3ed0e428a3e7447",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "07e67804b2d88546",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/商品展示网页.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "商品展示网页"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d7acf911615f8bdb",
+    "type": "split",
+    "children": [
+      {
+        "id": "d743b8cce1d6fb68",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1e73585e331b5844",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "e715f69f8591f503",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "1cbfa834e5b42e2b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "e78209094e3f9c67",
+    "type": "split",
+    "children": [
+      {
+        "id": "5c67441276ad46bb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3feabc3efc187863",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "前端/Web API.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Web API 的反向链接列表"
+            }
+          },
+          {
+            "id": "2b5e4a50c7282261",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "计算机/前端/Web API.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Web API 的出链列表"
+            }
+          },
+          {
+            "id": "090adb9378f8a438",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          },
+          {
+            "id": "20f8c8fc73e63c0c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "34924967258d5963",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "projects/商品展示网页.md",
+                "followCursor": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "商品展示网页 的大纲"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "07e67804b2d88546",
+  "lastOpenFiles": [
+    "计算机/前端/Java Script.md",
+    "计算机/前端/CSS.md",
+    "计算机/前端/HTML.md",
+    "projects/商品展示网页.md",
+    "计算机/数据库/MySQL.md",
+    "计算机/前端/Web API.md",
+    "计算机/数据库",
+    "英语/单词/健康与身体.md",
+    "英语/单词/日常生活.md",
+    "计算机/前端/Vue3.md",
+    "英语/单词/自然与地理.md",
+    "英语/单词/职业与身份.md",
+    "英语/单词/娱乐与爱好.md",
+    "英语/单词/食物与饮品.md",
+    "英语/单词/社会与文化.md",
+    "英语/单词/商业与经济.md",
+    "英语/单词/​情感_情绪_性格_品德.md",
+    "英语/单词/其他分类.md",
+    "英语/单词/科技与网络.md",
+    "英语/单词/教育与学习.md",
+    "英语/单词/交通与旅行.md",
+    "英语/单词/动作.md",
+    "英语/单词/单词.md",
+    "英语/单词/抽象类.md",
+    "英语/英语.md",
+    "计算机/后端/SpringBoot.md",
+    "计算机/git使用教程.md",
+    "images/Editor _ Mermaid Chart-2025-06-24-020820.png",
+    "projects",
+    "Game Design",
+    "images/Pasted image 20250423203208.png",
+    "images/QQ_1745408632189.png",
+    "计算机/机器学习",
+    "images/Pasted image 20250409102233.png",
+    "images/Pasted image 20250409102206.png",
+    "images/Pasted image 20250408195212.png",
+    "images/Pasted image 20250408194950.png",
+    "images/Pasted image 20250408194403.png",
+    "images/Pasted image 20250408194333.png",
+    "images/Pasted image 20250408192211.png",
+    "images",
+    "建模/Blender",
+    "英语/未命名",
+    "英语/单词",
+    "剪辑",
+    "建模"
+  ]
+}
