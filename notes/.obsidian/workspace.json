@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f3ed0e428a3e7447",
+        "id": "e795ad21e68055bd",
         "type": "tabs",
         "children": [
           {
-            "id": "07e67804b2d88546",
+            "id": "b2b95f7ebd0f142f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "学习计划/网站开发学习路线.md",
+                "file": "计算机/技术基础/git使用教程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "网站开发学习路线"
+              "title": "git使用教程"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/Web API.md",
+                "file": "计算机/理论知识/组合数学.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Web API 的反向链接列表"
+              "title": "组合数学 的反向链接列表"
             }
           },
           {
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "学习计划/网站开发学习路线.md",
+                "file": "计算机/技术基础/git使用教程.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "网站开发学习路线 的大纲"
+              "title": "git使用教程 的大纲"
             }
           }
         ],
@@ -170,6 +170,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:创建新数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -180,53 +181,55 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "07e67804b2d88546",
+  "active": "b2b95f7ebd0f142f",
   "lastOpenFiles": [
-    "projects/商品展示网页.md",
+    "Obsidian 笔记指南.md",
+    "Web Develop/前端 Frontend/CSS.md",
+    "计算机/理论知识/算法设计与分析.md",
+    "计算机/理论知识/组合数学 Combinatorics.md",
+    "计算机/理论知识/计算机网络 Computer Networks.md",
+    "计算机/理论知识/计算机图形学 Computer Graph.md",
+    "计算机/理论知识/计算机视觉 Computer Vision.md",
+    "计算机/理论知识/操作系统 Operation System.md",
+    "计算机/理论知识/编译原理 Compiler Principles.md",
+    "计算机/理论知识/算法设计与分析-code.md",
+    "计算机/理论知识/离散数学 Discrete Mathematics.md",
     "学习计划/网站开发学习路线.md",
-    "学习计划",
-    "计算机/前端/Java Script.md",
-    "计算机/前端/CSS.md",
-    "计算机/前端/HTML.md",
-    "计算机/数据库/MySQL.md",
-    "计算机/前端/Web API.md",
-    "计算机/数据库",
-    "英语/单词/健康与身体.md",
-    "英语/单词/日常生活.md",
-    "计算机/前端/Vue3.md",
-    "英语/单词/自然与地理.md",
-    "英语/单词/职业与身份.md",
-    "英语/单词/娱乐与爱好.md",
-    "英语/单词/食物与饮品.md",
-    "英语/单词/社会与文化.md",
-    "英语/单词/商业与经济.md",
-    "英语/单词/​情感_情绪_性格_品德.md",
-    "英语/单词/其他分类.md",
-    "英语/单词/科技与网络.md",
-    "英语/单词/教育与学习.md",
-    "英语/单词/交通与旅行.md",
-    "英语/单词/动作.md",
-    "英语/单词/单词.md",
+    "计算机/技术基础/git使用教程.md",
+    "计算机/技术基础/Linux基础.md",
+    "计算机/技术基础",
+    "计算机/机器学习/machine learning.md",
+    "计算机/机器学习/DeepLearning.md",
+    "projects/Own Website Template.md",
+    "计算机/机器学习/论文复现_YOLO World.md",
+    "projects/音乐播放器项目.md",
+    "projects/商品展示网页.md",
+    "计算机/编程语言/C++.md",
+    "计算机/编程语言/SpringBoot.md",
+    "计算机/编程语言/Java.md",
+    "计算机/编程语言/C Sharp.md",
+    "Web Develop/后端 Backend",
+    "Web Develop/前端 Frontend",
+    "Web Develop",
+    "计算机/编程语言",
+    "计算机/未命名.md",
     "英语/单词/抽象类.md",
-    "英语/英语.md",
-    "计算机/后端/SpringBoot.md",
+    "images/Pasted image 20250926144023.png",
+    "未命名 1.canvas",
+    "未命名.canvas",
+    "未命名.base",
+    "images/Pasted image 20250926150513.png",
+    "images/Pasted image 20250926150449.png",
+    "images/Pasted image 20250926150052.png",
+    "images/Pasted image 20250923151725.png",
+    "images/Pasted image 20250923120921.png",
+    "images/Pasted image 20250922173457.png",
+    "images/Pasted image 20250827104159.png",
+    "学习计划",
+    "计算机/数据库 DataBase",
     "images/Editor _ Mermaid Chart-2025-06-24-020820.png",
     "projects",
     "Game Design",
-    "images/Pasted image 20250423203208.png",
-    "images/QQ_1745408632189.png",
-    "计算机/机器学习",
-    "images/Pasted image 20250409102233.png",
-    "images/Pasted image 20250409102206.png",
-    "images/Pasted image 20250408195212.png",
-    "images/Pasted image 20250408194950.png",
-    "images/Pasted image 20250408194403.png",
-    "images/Pasted image 20250408194333.png",
-    "images/Pasted image 20250408192211.png",
-    "images",
-    "建模/Blender",
-    "英语/未命名",
-    "英语/单词",
-    "剪辑"
+    "images/Pasted image 20250423203208.png"
   ]
 }

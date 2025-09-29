@@ -8,6 +8,7 @@
 # 2、git基本概念
 ## 2.1 git工作流
 ![[Editor _ Mermaid Chart-2025-06-24-020820.png]]
+![[Pasted image 20250827104159.png]]
 ## 2.2 git基本命令
 1.clone：从远程仓库中克隆代码到本地仓库
 2.checkout：从本地仓库中检出一个仓库分支然后进行修订
@@ -30,8 +31,8 @@
 安装完成后验证安装：```git --version```
 首次配置（必须）：设置用户名和邮箱
 ```
-git config --global user.name "你的名字"
-git config --global user.email "你的邮箱@example.com"
+git config --global user.name yourname
+git config --global user.email youremail@example.com
 ```
 
 ---
@@ -42,11 +43,17 @@ Git 的基本操作主要包括仓库初始化、修改追踪、版本记录、�
 在本地创建一个新的 Git 仓库：
 `git init`
 执行后，会在当前目录生成一个 `.git` 隐藏文件夹，用于存放版本信息。
+文件夹中除了.git文件外都叫工作文件
 
 ## 3.2 查看仓库状态
 用于查看当前工作区与暂存区的状态差异：
 `git status`
 可以帮助我们确认哪些文件已修改、哪些已添加到暂存区等。
+
+新修改但是未添加到暂存区的文件分为
+	未暂存unstaged
+	未跟踪untracked
+都可以通过`git add`指令添加到stage里
 
 ## 3.3 添加修改到暂存区
 将修改后的文件添加到暂存区：

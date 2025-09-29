@@ -1,5 +1,9 @@
 {
   "showLineNumber": true,
   "promptDelete": true,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "images",
+  "userIgnoreFilters": [
+    "images/"
+  ]
 }
