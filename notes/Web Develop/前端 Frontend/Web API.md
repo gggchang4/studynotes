@@ -4,7 +4,7 @@ tags:
   - 前端
   - JavaScript
 ---
-# 一. WEB API
+/# 一. WEB API
 ### a. 在 WEB API 中声明变量 `const` 优先
 ### b. 作用和分类
 #### i. 作用
