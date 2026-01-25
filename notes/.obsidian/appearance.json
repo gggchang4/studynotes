@@ -1,4 +1,5 @@
 {
   "cssTheme": "Minimal",
-  "baseFontSize": 15
+  "baseFontSize": 15,
+  "accentColor": "#52d6fc"
 }
