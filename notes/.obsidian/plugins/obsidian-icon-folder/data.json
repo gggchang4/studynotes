@@ -6,6 +6,7 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "RiFireLine",
       "SiGithub",
       "SiReact",
       "FabNodeJs",
@@ -29,8 +30,7 @@
       "SiLua",
       "SiGooglechrome",
       "WhWuhanUniversityTransparent",
-      "WhWuhanUniversityBlackwhite",
-      "SiMysql"
+      "WhWuhanUniversityBlackwhite"
     ],
     "recentlyUsedIconsSize": 25,
     "rules": [],
@@ -107,5 +107,6 @@
   "WatchList/Movie.md": "RiMovie2Fill",
   "计算机/编程语言/Node.js.md": "FabNodeJs",
   "Web Develop/前端 Frontend/React.md": "SiReact",
-  "计算机/技术基础/Github.md": "SiGithub"
+  "计算机/技术基础/Github.md": "SiGithub",
+  "计算机/算法 Algorithms/LeetCode Hot 100.md": "RiFireLine"
 }

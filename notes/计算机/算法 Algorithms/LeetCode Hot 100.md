@@ -259,7 +259,7 @@ public:
 ```
 
 # 7、trap接雨水
-## 动态规划
+## DP
 逐一记录每个坐标i处的maxleft和maxright
 ```C++
 class Solution {
@@ -289,7 +289,7 @@ public:
     }
 };
 ```
-## 单调栈
+## Single Stack
 ```C++
 class Solution {
 public:
@@ -315,7 +315,7 @@ public:
     }
 };
 ```
-## 双指针
+## Double Ptr
 ### 暴力双指针
 对每个坐标i，求其左右max
 ```C++
@@ -343,7 +343,19 @@ public:
 };
 ```
 ### 改进双指针
-没太看懂说实话
+注意到下标 i 处能接的雨水量由 $leftMax[i]$ 和 $rightMax[i]$ 中的最小值决定。由于数组 $leftMax$ 是从左往右计算，数组 $rightMax$ 是从右往左计算，因此可以使用双指针和两个变量代替两个数组。
+
+维护两个指针 $left$ 和 $right$，以及两个变量 $leftMax$ 和 $rightMax$，初始时 $left=0,right=n−1,leftMax=0,rightMax=0$。指针 $left$ 只会向右移动，指针 $right$ 只会向左移动，在移动指针的过程中维护两个变量 $leftMax$ 和 $rightMax$ 的值。
+
+当两个指针没有相遇时，进行如下操作：
+
+- 使用 $height[left]$ 和 $height[right]$ 的值更新 $leftMax$ 和 $rightMax$ 的值；
+
+- 如果$height[left]<height[right]$，则必有 $leftMax<rightMax$，下标 $left$处能接的雨水量等于 $leftMax−height[left]$，将下标 $left$ 处能接的雨水量加到能接的雨水总量，然后将 $left$ 加 1（即向右移动一位）；
+
+- 如果 $height[left]≥height[right]$，则必有 $leftMax≥rightMax$，下标 $right$ 处能接的雨水量等于 $rightMax−height[right]$，将下标 $right$ 处能接的雨水量加到能接的雨水总量，然后将 $right$ 减 1（即向左移动一位）。
+
+当两个指针相遇时，即可得到能接的雨水总量。
 ```C++
 class Solution {
 public:
@@ -362,6 +374,150 @@ public:
                 --right;
             }
         }
+        return ans;
+    }
+};
+```
+
+# 8、lengthOfLongestSubstring无重复字符的最长子串
+```C++
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        // 哈希集合，记录每个字符是否出现过
+        unordered_set<char> occ;
+        int n = s.size();
+        // 右指针，初始值为 -1，相当于我们在字符串的左边界的左侧，还没有开始移动
+        int rk = -1, ans = 0;
+        // 枚举左指针的位置，初始值隐性地表示为 -1
+        for (int i = 0; i < n; ++i) {
+            if (i != 0) {
+                // 左指针向右移动一格，移除一个字符
+                occ.erase(s[i - 1]);
+            }
+            while (rk + 1 < n && !occ.count(s[rk + 1])) {
+                // 不断地移动右指针
+                occ.insert(s[rk + 1]);
+                ++rk;
+            }
+            // 第 i 到 rk 个字符是一个极长的无重复字符子串
+            ans = max(ans, rk - i + 1);
+        }
+        return ans;
+    }
+};
+```
+
+# 9、findAnagrams找到字符串中的所有字母异位词
+## Brute Force
+```C++
+class Solution {
+public:
+    vector<int> findAnagrams(string s, string p) {
+        vector<int> ans;
+        int length = p.size();
+        vector<int> hash(26);
+        vector<int> zero(26,0);
+        if(length>s.size()) return ans;
+        for(int i=0; i<length; ++i) {
+            hash[p[i]-'a']++;
+        }
+        for(int i=0; i<s.size()-length+1; ++i) {
+            vector<int> temp = hash;
+            for(int j=0; j<length; ++j) {
+                temp[s[i+j]-'a']--;
+            }
+            if(temp == zero) ans.push_back(i);
+        }
+        return ans;
+    }
+};
+```
+## Sliding Window
+```C++
+class Solution {
+public:
+    vector<int> findAnagrams(string s, string p) {
+        int sLen = s.size(), pLen = p.size();
+
+        if (sLen < pLen) {
+            return vector<int>();
+        }
+
+        vector<int> ans;
+        vector<int> sCount(26);
+        vector<int> pCount(26);
+        for (int i = 0; i < pLen; ++i) {
+            ++sCount[s[i] - 'a'];
+            ++pCount[p[i] - 'a'];
+        }
+
+        if (sCount == pCount) {
+            ans.emplace_back(0);
+        }
+
+        for (int i = 0; i < sLen - pLen; ++i) {
+            --sCount[s[i] - 'a'];
+            ++sCount[s[i + pLen] - 'a'];
+
+            if (sCount == pCount) {
+                ans.emplace_back(i + 1);
+            }
+        }
+
+        return ans;
+    }
+};
+```
+## Optimized Sliding Window
+```C++
+class Solution {
+public:
+    vector<int> findAnagrams(string s, string p) {
+        int sLen = s.size(), pLen = p.size();
+
+        if (sLen < pLen) {
+            return vector<int>();
+        }
+
+        vector<int> ans;
+        vector<int> count(26);
+        for (int i = 0; i < pLen; ++i) {
+            ++count[s[i] - 'a'];
+            --count[p[i] - 'a'];
+        }
+
+        int differ = 0;
+        for (int j = 0; j < 26; ++j) {
+            if (count[j] != 0) {
+                ++differ;
+            }
+        }
+
+        if (differ == 0) {
+            ans.emplace_back(0);
+        }
+
+        for (int i = 0; i < sLen - pLen; ++i) {
+            if (count[s[i] - 'a'] == 1) {  // 窗口中字母 s[i] 的数量与字符串 p 中的数量从不同变得相同
+                --differ;
+            } else if (count[s[i] - 'a'] == 0) {  // 窗口中字母 s[i] 的数量与字符串 p 中的数量从相同变得不同
+                ++differ;
+            }
+            --count[s[i] - 'a'];
+
+            if (count[s[i + pLen] - 'a'] == -1) {  // 窗口中字母 s[i+pLen] 的数量与字符串 p 中的数量从不同变得相同
+                --differ;
+            } else if (count[s[i + pLen] - 'a'] == 0) {  // 窗口中字母 s[i+pLen] 的数量与字符串 p 中的数量从相同变得不同
+                ++differ;
+            }
+            ++count[s[i + pLen] - 'a'];
+            
+            if (differ == 0) {
+                ans.emplace_back(i + 1);
+            }
+        }
+
         return ans;
     }
 };
