@@ -13,16 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Develop/前端 Frontend/Web API.md",
+                "file": "Web Develop/前端 Frontend/Node.js.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Web API"
+              "title": "Node.js"
             }
           },
           {
             "id": "4fde4295e73d4430",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Web Develop/前端 Frontend/AJAX.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AJAX"
+            }
+          },
+          {
+            "id": "1fd849ccc30efb96",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "英语/单词/日常生活.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "日常生活"
+            }
+          },
+          {
+            "id": "afbf8bb61a77deab",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,8 +62,23 @@
               "icon": "lucide-file",
               "title": "LeetCode Hot 100"
             }
+          },
+          {
+            "id": "0c8f109cb7440b13",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "计算机/算法 Algorithms/LeetCode Hot 100.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "LeetCode Hot 100"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -166,13 +209,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Web Develop/前端 Frontend/Web API.md",
+                "file": "计算机/算法 Algorithms/LeetCode Hot 100.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Web API 的大纲"
+              "title": "LeetCode Hot 100 的大纲"
             }
           }
         ],
@@ -195,34 +238,35 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "3005d0873b4c8992",
+  "active": "0c8f109cb7440b13",
   "lastOpenFiles": [
+    "Web Develop/前端 Frontend/Node.js.md",
+    "英语/单词/日常生活.md",
     "学习计划/算法题/LeetCode Hot 100.md",
+    "Web Develop/前端 Frontend/AJAX.md",
+    "Web Develop/前端 Frontend/webpack.md",
     "Web Develop/前端 Frontend/Web API.md",
-    "Web Develop/前端 Frontend/Java Script.md",
     "Web Develop/前端 Frontend/Vue3.md",
     "Web Develop/前端 Frontend/React.md",
+    "images/d65efee9-701f-431d-9bd2-b52b99bc8c12.png",
+    "计算机/算法 Algorithms/LeetCode Hot 100.md",
+    "英语/单词/社会与文化.md",
+    "英语/单词/动作.md",
     "Web Develop/前端 Frontend/CSS.md",
     "Web Develop/前端 Frontend/HTML.md",
-    "计算机/算法 Algorithms/LeetCode Hot 100.md",
-    "学习计划/to-do.md",
-    "学习计划/网站开发学习路线.md",
-    "计算机/技术基础/Windows/快捷键.md",
-    "计算机/算法 Algorithms/图.md",
-    "计算机/算法 Algorithms/栈.md",
-    "计算机/算法 Algorithms/字符串.md",
-    "英语/单词/日常生活.md",
+    "英语/单词/健康与身体.md",
+    "英语/单词/单词.md",
+    "英语/单词/娱乐与爱好.md",
+    "英语/单词/自然与地理.md",
+    "英语/单词/职业与身份.md",
+    "英语/单词/食物与饮品.md",
+    "英语/单词/商业与经济.md",
+    "英语/单词/情感_情绪_性格_品德.md",
+    "英语/单词/其他分类.md",
     "英语/单词/科技与网络.md",
-    "计算机/技术基础/git使用教程.md",
-    "计算机/机器学习/DeepLearning.md",
-    "计算机/机器学习/machine learning.md",
-    "计算机/技术基础/Github.md",
-    "计算机/编程语言/Node.js.md",
-    "计算机/编程语言/python.md",
-    "计算机/编程语言/Java.md",
-    "计算机/编程语言/Lua.md",
-    "计算机/算法 Algorithms/哈希表.md",
-    "计算机/算法 Algorithms/链表.md",
+    "英语/单词/教育与学习.md",
+    "英语/单词/交通与旅行.md",
+    "英语/单词/抽象类.md",
     "未命名",
     "学习计划/算法题",
     "projects/3D_AI",
@@ -238,7 +282,6 @@
     "images/Pasted image 20251211204338.png",
     "images/Pasted image 20251211200323.png",
     "images/Pasted image 20251211200305.png",
-    "images/Pasted image 20251211194932.png",
     "Game Deasign",
     "未命名 2.base",
     "未命名 1.base",

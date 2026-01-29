@@ -522,3 +522,162 @@ public:
     }
 };
 ```
+
+# 10、和为k的子数组
+## Brute Force
+时间复杂度太高，可以先把vector赋值给一个数组，vector查找并不是O(1)
+```C++
+class Solution {
+public:
+    int subarraySum(vector<int>& nums, int k) {
+        int count=0;
+        for(int i=0; i<nums.size(); ++i) {
+            int sum=0;
+            for(int j=i; j<nums.size(); ++j) {
+                sum += nums[j];
+                if(sum == k) count++;
+            }
+        }
+        return count;
+    }
+};
+```
+## PreSum+Hash
+```C++
+class Solution {
+public:
+    int subarraySum(vector<int>& nums, int k) {
+        // 哈希表：key = 前缀和，value = 该前缀和出现的次数
+        unordered_map<int, int> mp;
+        // 初始化：前缀和为0的情况出现了1次（对应pre[0]=0，还没遍历任何元素时）
+        mp[0] = 1;
+        // count：记录和为k的子数组总数；pre：记录当前的前缀和
+        int count = 0, pre = 0;
+        // 遍历数组中的每个元素x
+        for (auto& x:nums) {
+            // 累加当前元素，更新前缀和
+            pre += x;
+            // 关键：检查是否存在前缀和 = pre - k
+            // 如果存在，说明有 mp[pre - k] 个j满足 pre[i] - pre[j] = k
+            if (mp.find(pre - k) != mp.end()) {
+                count += mp[pre - k];
+            }
+            // 将当前前缀和pre加入哈希表，次数+1（如果已存在则累加，不存在则设为1）
+            mp[pre]++;
+        }
+        // 返回最终统计的数量
+        return count;
+    }
+};
+```
+
+# 11、maxSlidingWindow滑动窗口的最大值
+## Brute Force
+```C++
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        vector<int> ans;
+        int left=0;
+        int right=left+k-1;
+        while(right<=nums.size()-1) {
+            int maxk=INT_MIN;
+            for(int i=0; i<k; ++i) {
+                maxk = max(maxk,nums[left+i]);
+            }
+            ans.push_back(maxk);
+            left++;
+            right++;
+        }
+        return ans;
+    }
+};
+```
+## Priority Queue
+```C++
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        int n = nums.size();
+        priority_queue<pair<int, int>> q;
+        for (int i = 0; i < k; ++i) {
+            q.emplace(nums[i], i);
+        }
+        vector<int> ans = {q.top().first};
+        for (int i = k; i < n; ++i) {
+            q.emplace(nums[i], i);
+            while (q.top().second <= i - k) {
+                q.pop();
+            }
+            ans.push_back(q.top().first);
+        }
+        return ans;
+    }
+};
+```
+## Monotonic Queue
+```C++
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        int n = nums.size();
+        deque<int> q;
+        for (int i = 0; i < k; ++i) {
+            while (!q.empty() && nums[i] >= nums[q.back()]) {
+                q.pop_back();
+            }
+            q.push_back(i);
+        }
+
+        vector<int> ans = {nums[q.front()]};
+        for (int i = k; i < n; ++i) {
+            while (!q.empty() && nums[i] >= nums[q.back()]) {
+                q.pop_back();
+            }
+            q.push_back(i);
+            while (q.front() <= i - k) {
+                q.pop_front();
+            }
+            ans.push_back(nums[q.front()]);
+        }
+        return ans;
+    }
+};
+```
+## Block+Preprocess / Sparse Table
+```C++
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        int n = nums.size();
+        vector<int> prefixMax(n), suffixMax(n);
+        for (int i = 0; i < n; ++i) {
+            if (i % k == 0) {
+                prefixMax[i] = nums[i];
+            }
+            else {
+                prefixMax[i] = max(prefixMax[i - 1], nums[i]);
+            }
+        }
+        for (int i = n - 1; i >= 0; --i) {
+            if (i == n - 1 || (i + 1) % k == 0) {
+                suffixMax[i] = nums[i];
+            }
+            else {
+                suffixMax[i] = max(suffixMax[i + 1], nums[i]);
+            }
+        }
+
+        vector<int> ans;
+        for (int i = 0; i <= n - k; ++i) {
+            ans.push_back(max(suffixMax[i], prefixMax[i + k - 1]));
+        }
+        return ans;
+    }
+};
+```
+
+# 12、minWindow最小覆盖子串
+```C++
+
+```
