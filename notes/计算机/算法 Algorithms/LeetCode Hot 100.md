@@ -678,6 +678,160 @@ public:
 ```
 
 # 12、minWindow最小覆盖子串
+## Sliding Window
 ```C++
+class Solution {
+public:
+    unordered_map <char, int> ori, cnt;
 
+    bool check() {
+        for (const auto &p: ori) {
+            if (cnt[p.first] < p.second) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    string minWindow(string s, string t) {
+        for (const auto &c: t) {
+            ++ori[c];
+        }
+
+        int l = 0, r = -1;
+        int len = INT_MAX, ansL = -1, ansR = -1;
+
+        while (r < int(s.size())) {
+            if (ori.find(s[++r]) != ori.end()) {
+                ++cnt[s[r]];
+            }
+            while (check() && l <= r) {
+                if (r - l + 1 < len) {
+                    len = r - l + 1;
+                    ansL = l;
+                }
+                if (ori.find(s[l]) != ori.end()) {
+                    --cnt[s[l]];
+                }
+                ++l;
+            }
+        }
+
+        return ansL == -1 ? string() : s.substr(ansL, len);
+    }
+};
 ```
+
+## Optimized
+```C++
+class Solution {
+public:
+    string minWindow(string s, string t) {
+        int cnt[128]{};
+        int less = 0;
+        for (char c : t) {
+            if (cnt[c] == 0) {
+                less++; // 有 less 种字母的出现次数 < t 中的字母出现次数
+            }
+            cnt[c]++;
+        }
+
+        int m = s.size();
+        int ans_left = -1, ans_right = m;
+        int left = 0;
+        for (int right = 0; right < m; right++) { // 移动子串右端点
+            char c = s[right]; // 右端点字母
+            cnt[c]--; // 右端点字母移入子串
+            if (cnt[c] == 0) {
+                // 原来窗口内 c 的出现次数比 t 的少，现在一样多
+                less--;
+            }
+            while (less == 0) { // 涵盖：所有字母的出现次数都是 >=
+                if (right - left < ans_right - ans_left) { // 找到更短的子串
+                    ans_left = left; // 记录此时的左右端点
+                    ans_right = right;
+                }
+                char x = s[left]; // 左端点字母
+                if (cnt[x] == 0) {
+                    // x 移出窗口之前，检查出现次数，
+                    // 如果窗口内 x 的出现次数和 t 一样，
+                    // 那么 x 移出窗口后，窗口内 x 的出现次数比 t 的少
+                    less++;
+                }
+                cnt[x]++; // 左端点字母移出子串
+                left++;
+            }
+        }
+        return ans_left < 0 ? "" : s.substr(ans_left, ans_right - ans_left + 1);
+    }
+};
+```
+
+# 13、maxSubArray最大子数组和
+## DP
+动态规划方程：$f(i)=max(f(i−1)+nums[i],nums[i])$
+```C++
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int pre = 0, maxAns = nums[0];
+        for (const auto &x: nums) {
+            pre = max(pre + x, x);
+            maxAns = max(maxAns, pre);
+        }
+        return maxAns;
+    }
+};
+```
+## Divid and Conquer
+没看懂fuck
+```C++
+class Solution {
+public:
+	struct Status {
+	    int lSum;  // 以区间左端点为起点的最大子数组和
+	    int rSum;  // 以区间右端点为终点的最大子数组和
+	    int mSum;  // 区间内的最大子数组和（核心目标）
+	    int iSum;  // 区间所有元素的和（总和）
+	};
+	//核心函数，合并左右子区间信息
+    Status pushUp(Status l, Status r) {
+	    // 1. 合并后区间的总和 = 左区间总和 + 右区间总和
+        int iSum = l.iSum + r.iSum;
+        // 2. 合并后以左端点为起点的最大和： 
+        // 要么是左区间自己的lSum，要么是左区间全部元素+右区间的lSum（跨左右）
+        int lSum = max(l.lSum, l.iSum + r.lSum);
+        // 3. 合并后以右端点为终点的最大和： 
+        // 要么是右区间自己的rSum，要么是右区间全部元素+左区间的rSum（跨左右）
+        int rSum = max(r.rSum, r.iSum + l.rSum);
+        // 4. 合并后区间的最大子数组和： 
+        // 候选值有三个：左区间的mSum、右区间的mSum、左区间的rSum+右区间的lSum（跨左右的情况）
+        int mSum = max(max(l.mSum, r.mSum), l.rSum + r.lSum);
+        return (Status) {lSum, rSum, mSum, iSum};
+    };
+	//递归地将数组二分，直到区间只有一个元素，再向上合并：
+    Status get(vector<int> &a, int l, int r) {
+	    // 递归终止条件：区间只有一个元素
+        if (l == r) {
+	        // 单个元素的四个值都等于自己
+            return (Status) {a[l], a[l], a[l], a[l]};
+        }
+        // 二分中点（等价于(l+r)/2，位运算更快）
+        int m = (l + r) >> 1;
+        // 递归计算左半区间 [l, m] 的信息
+        Status lSub = get(a, l, m);
+        // 递归计算右半区间 [m+1, r] 的信息
+        Status rSub = get(a, m + 1, r);
+        // 合并左右区间的信息，返回当前区间的Status
+        return pushUp(lSub, rSub);
+    }
+
+    int maxSubArray(vector<int>& nums) {
+        return get(nums, 0, nums.size() - 1).mSum;
+    }
+};
+```
+
+# 14、merge合并区间
+
+

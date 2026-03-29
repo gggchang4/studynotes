@@ -6,6 +6,8 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "RiLightbulbLine",
+      "RiJavascriptFill",
       "SiWebpack",
       "RiFireLine",
       "SiGithub",
@@ -28,9 +30,7 @@
       "SiLeetcode",
       "SiUnity",
       "LiGamepad2",
-      "SiLua",
-      "SiGooglechrome",
-      "WhWuhanUniversityTransparent"
+      "SiLua"
     ],
     "recentlyUsedIconsSize": 25,
     "rules": [],
@@ -63,7 +63,6 @@
   "计算机/数据库 DataBase": "LiDatabase",
   "Web Develop/前端 Frontend/CSS.md": "SiCss3",
   "Web Develop/前端 Frontend/HTML.md": "SiHtml5",
-  "Web Develop/前端 Frontend/Java Script.md": "SiJavascript",
   "Web Develop/前端 Frontend/Vue3.md": "RiVuejsFill",
   "建模/Blender": "SiBlender",
   "计算机/理论知识/编译原理 Compiler Principles.md": "SiCompilerexplorer",
@@ -110,5 +109,8 @@
   "计算机/技术基础/Github.md": "SiGithub",
   "计算机/算法 Algorithms/LeetCode Hot 100.md": "RiFireLine",
   "Web Develop/前端 Frontend/Node.js.md": "FabNodeJs",
-  "Web Develop/前端 Frontend/webpack.md": "SiWebpack"
+  "Web Develop/前端 Frontend/webpack.md": "SiWebpack",
+  "Web Develop/前端 Frontend/JavaScript/Java Script.md": "SiJavascript",
+  "Web Develop/前端 Frontend/JavaScript": "RiJavascriptFill",
+  "Idea.md": "RiLightbulbLine"
 }
