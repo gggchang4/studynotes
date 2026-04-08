@@ -27,12 +27,40 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "考研/408.md",
+                "file": "Idea.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "408"
+              "title": "Idea"
+            }
+          },
+          {
+            "id": "c7c4e69820df6206",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Plan.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Plan"
+            }
+          },
+          {
+            "id": "7e9b435d6e618ae2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SaaS Stack.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SaaS Stack"
             }
           },
           {
@@ -47,20 +75,6 @@
               },
               "icon": "lucide-file",
               "title": "LeetCode Hot 100"
-            }
-          },
-          {
-            "id": "1a36a54bc9720e8b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Idea.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Idea"
             }
           }
         ],
@@ -195,13 +209,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Idea.md",
+                "file": "SaaS Stack.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Idea 的大纲"
+              "title": "SaaS Stack 的大纲"
             }
           }
         ],
@@ -224,14 +238,19 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "1a36a54bc9720e8b",
+  "active": "7e9b435d6e618ae2",
   "lastOpenFiles": [
-    "计算机/算法 Algorithms/LeetCode Hot 100.md",
+    "Plan.md",
+    "SaaS Stack.md",
     "Idea.md",
     "考研/英语.md",
-    "考研/408.md",
     "考研/线代.md",
     "考研/高数.md",
+    "考研/408.md",
+    "Obsidian 笔记指南.md",
+    "积累.md",
+    "计算机/算法 Algorithms/LeetCode Hot 100.md",
+    "英语/单词/日常生活.md",
     "学习计划/算法题/LeetCode Hot 100.md",
     "考研",
     "英语/单词/动作.md",
@@ -240,7 +259,6 @@
     "英语/单词/教育与学习.md",
     "Web Develop/前端 Frontend/JavaScript/Java Script.md",
     "Web Develop/前端 Frontend/AJAX.md",
-    "英语/单词/日常生活.md",
     "Web Develop/前端 Frontend/JavaScript/Web API.md",
     "Web Develop/前端 Frontend/Node.js.md",
     "Web Develop/前端 Frontend/JavaScript",
@@ -251,10 +269,6 @@
     "英语/单词/社会与文化.md",
     "Web Develop/前端 Frontend/CSS.md",
     "Web Develop/前端 Frontend/HTML.md",
-    "英语/单词/健康与身体.md",
-    "英语/单词/单词.md",
-    "英语/单词/娱乐与爱好.md",
-    "英语/单词/自然与地理.md",
     "学习计划/算法题",
     "projects/3D_AI",
     "WatchList",
