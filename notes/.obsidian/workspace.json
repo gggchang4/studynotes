@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SaaS Stack.md",
+                "file": "英语/单词/考研.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SaaS Stack"
+              "title": "考研"
             }
           },
           {
@@ -209,13 +209,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SaaS Stack.md",
+                "file": "英语/单词/考研.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "SaaS Stack 的大纲"
+              "title": "考研 的大纲"
             }
           }
         ],
@@ -240,15 +240,21 @@
   },
   "active": "7e9b435d6e618ae2",
   "lastOpenFiles": [
-    "Plan.md",
+    "积累.md",
+    "英语/单词/考研.md",
+    "images/Pasted image 20260417211045.png",
     "SaaS Stack.md",
+    "images/4f05f1e4771dd51d5a328c410b778bcf.png",
+    "images/c758184c57e860aaaa6037d25633dddc.png",
+    "images/Pasted image 20260412211753.png",
+    "images/Pasted image 20260412211409.png",
+    "Plan.md",
     "Idea.md",
     "考研/英语.md",
     "考研/线代.md",
     "考研/高数.md",
     "考研/408.md",
     "Obsidian 笔记指南.md",
-    "积累.md",
     "计算机/算法 Algorithms/LeetCode Hot 100.md",
     "英语/单词/日常生活.md",
     "学习计划/算法题/LeetCode Hot 100.md",
@@ -268,7 +274,6 @@
     "images/d65efee9-701f-431d-9bd2-b52b99bc8c12.png",
     "英语/单词/社会与文化.md",
     "Web Develop/前端 Frontend/CSS.md",
-    "Web Develop/前端 Frontend/HTML.md",
     "学习计划/算法题",
     "projects/3D_AI",
     "WatchList",
@@ -278,11 +283,6 @@
     "images/Pasted image 20251211204708.png",
     "images/Pasted image 20251211204657.png",
     "images/Pasted image 20251211204646.png",
-    "images/Pasted image 20251211204406.png",
-    "images/Pasted image 20251211204353.png",
-    "images/Pasted image 20251211204338.png",
-    "images/Pasted image 20251211200323.png",
-    "images/Pasted image 20251211200305.png",
     "Game Deasign",
     "未命名 2.base",
     "未命名 1.base",
