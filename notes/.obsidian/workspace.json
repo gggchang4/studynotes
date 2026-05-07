@@ -78,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -209,13 +209,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Idea.md",
+                "file": "英语/单词/考研.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Idea 的大纲"
+              "title": "考研 的大纲"
             }
           }
         ],
@@ -238,11 +238,11 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "7ce5c1f679ed53dc",
+  "active": "845f5fece020872e",
   "lastOpenFiles": [
+    "Idea.md",
     "积累.md",
     "英语/单词/考研.md",
-    "Idea.md",
     "Plan.md",
     "英语/单词/教育与学习.md",
     "images/Pasted image 20260428231453.png",

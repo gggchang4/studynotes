@@ -14,7 +14,7 @@ set mm=%datetime:~4,2%
 set dd=%datetime:~6,2%
 
 :: Generate commit message
-set msg=study note update in %yy%/%mm%/%dd%
+set msg=study note update in %dd%/%mm%/%yy%
 
 echo.
 echo === Pulling from remote repository ===
