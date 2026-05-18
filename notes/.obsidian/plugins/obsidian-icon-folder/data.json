@@ -6,6 +6,7 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "RiToolsFill",
       "FasAlignRight",
       "LiNotebookPen",
       "RiLightbulbLine",
@@ -29,8 +30,7 @@
       "FasCubes",
       "LiAppWindow",
       "SiObsidian",
-      "SiLeetcode",
-      "SiUnity"
+      "SiLeetcode"
     ],
     "recentlyUsedIconsSize": 25,
     "rules": [],
@@ -114,5 +114,6 @@
   "Web Develop/前端 Frontend/JavaScript": "RiJavascriptFill",
   "Idea.md": "RiLightbulbLine",
   "积累.md": "LiNotebookPen",
-  "Plan.md": "FasAlignRight"
+  "Plan.md": "FasAlignRight",
+  "Tools.md": "RiToolsFill"
 }
