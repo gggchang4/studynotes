@@ -4,95 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "d9aa670960bb08b0",
+        "id": "d84cd2938ac4d8f2",
         "type": "tabs",
         "children": [
           {
-            "id": "3005d0873b4c8992",
+            "id": "1d16daad00232bc7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Develop/前端 Frontend/JavaScript/Java Script.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Java Script"
-            }
-          },
-          {
-            "id": "afbf8bb61a77deab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "英语/单词/教育与学习.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "教育与学习"
-            }
-          },
-          {
-            "id": "7e9b435d6e618ae2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "积累.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "积累"
-            }
-          },
-          {
-            "id": "d19bd5173ba4a1ea",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "素材积累.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "素材积累"
-            }
-          },
-          {
-            "id": "8a56615b7015786c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "英语/单词/考研.md",
+                "file": "English/考研.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "考研"
             }
-          },
-          {
-            "id": "d6a18701584d494b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Idea.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Idea"
-            }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -223,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Idea.md",
+                "file": "English/考研.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Idea 的大纲"
+              "title": "考研 的大纲"
             }
           }
         ],
@@ -252,15 +181,15 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "d6a18701584d494b",
+  "active": "1d16daad00232bc7",
   "lastOpenFiles": [
+    "Idea.md",
     "计算机/数据库 DataBase/PostgreSQL.md",
     "Web Develop/Backend",
     "计算机/技术基础/服务器使用基础.md",
     "计算机/技术基础/git使用教程.md",
     "计算机/技术基础/Linux基础.md",
     "计算机/技术基础/Github.md",
-    "Idea.md",
     "WHU.md",
     "Plan.md",
     "Obsidian 笔记指南.md",

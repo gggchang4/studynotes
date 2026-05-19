@@ -6,6 +6,7 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiGalleryVerticalEnd",
       "LiChrome",
       "LiServer",
       "SiPostgresql",
@@ -29,8 +30,7 @@
       "SiHbo",
       "SiAmazon",
       "SiNetflix",
-      "LiTv",
-      "SiCplusplusbuilder"
+      "LiTv"
     ],
     "recentlyUsedIconsSize": 25,
     "rules": [],
@@ -120,5 +120,6 @@
   "Web Develop/Frontend/Node.js.md": "FabNodeJs",
   "Web Develop/Frontend/webpack.md": "SiWebpack",
   "Web Develop/Frontend/JavaScript/Java Script.md": "SiJavascript",
-  "Web Develop/Backend": "LiServer"
+  "Web Develop/Backend": "LiServer",
+  "Collect": "LiGalleryVerticalEnd"
 }
