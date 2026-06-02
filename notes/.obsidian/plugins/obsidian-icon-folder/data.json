@@ -106,7 +106,6 @@
   "Tools/Command/Linux Commands.md": "SiUbuntu",
   "Tools/Command/Windows Commands.md": "SiWindowsterminal",
   "Tools/Command/Mac Commands.md": "LiCommand",
-  "asset": "FarImage",
   "Projects": "FabAppStoreIos",
   "English": "RiEnglishInput",
   "Collect/积累.md": "LiNotebookPen",
@@ -121,5 +120,6 @@
   "Web Develop/Frontend/webpack.md": "SiWebpack",
   "Web Develop/Frontend/JavaScript/Java Script.md": "SiJavascript",
   "Web Develop/Backend": "LiServer",
-  "Collect": "LiGalleryVerticalEnd"
+  "Collect": "LiGalleryVerticalEnd",
+  "assets": "FarImage"
 }

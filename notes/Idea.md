@@ -12,3 +12,7 @@
 ## Based on AI 实时变声器
 
 # Personal Website
+
+## Album Collection
+
+## Diary （like Tesseract）
