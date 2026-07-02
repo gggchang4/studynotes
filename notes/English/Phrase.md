@@ -6,3 +6,6 @@
 - up front 预付，先付
 - get a load of 注意看
 - no good deed goes unpunished 好心没好报
+- make ends meet 勉强维持生计
+- what do sb get off ... 某人凭什么...
+- 
