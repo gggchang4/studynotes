@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "English/Vocabulary/健康与身体.md",
+                "file": "Idea.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "健康与身体"
+              "title": "Idea"
             }
           }
         ]
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "English/Vocabulary/健康与身体.md",
+                "file": "Idea.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 健康与身体"
+              "title": "Outline of Idea"
             }
           }
         ],
@@ -183,35 +183,38 @@
   },
   "active": "cadc87835617f74c",
   "lastOpenFiles": [
-    "English/Vocabulary/交通与旅行.md",
-    "English/Vocabulary/科技与网络.md",
-    "English/Vocabulary/日常生活.md",
-    "English/Vocabulary/专业名词.md",
-    "English/Vocabulary/职业与身份.md",
-    "English/Vocabulary/社会与文化.md",
-    "English/Vocabulary/其他分类.md",
-    "English/Vocabulary/教育与学习.md",
     "English/Vocabulary/健康与身体.md",
-    "English/Vocabulary/单词.md",
+    "English/Vocabulary/社会与文化.md",
+    "English/Vocabulary/日常生活.md",
+    "Fonts.md",
+    "Collect/积累.md",
+    "images/4cb3ef14-cd89-483e-8a1a-cc11c47fb284.png",
+    "images/58541fe9-740e-4218-bef6-3bc0f3e8b956.png",
+    "images/1bd41ebe-52a5-4bda-aa74-d90d0d9c35b1.png",
+    "Collect/素材积累.md",
     "English/Vocabulary/动作.md",
+    "English/Vocabulary/单词.md",
+    "English/Vocabulary/抽象类.md",
+    "English/Vocabulary/教育与学习.md",
+    "English/Vocabulary/其他分类.md",
+    "English/Vocabulary/交通与旅行.md",
+    "English/Vocabulary/职业与身份.md",
+    "English/Vocabulary/自然与地理.md",
+    "English/Vocabulary/科技与网络.md",
+    "English/Vocabulary/专业名词.md",
     "English/Vocabulary/食物与饮品.md",
     "English/Vocabulary/娱乐与爱好.md",
     "English/Vocabulary/情感_情绪_性格_品德.md",
     "English/Vocabulary/商业与经济.md",
-    "English/Vocabulary/自然与地理.md",
-    "Collect/素材积累.md",
     "images/Pasted image 20260703222220.png",
     "images",
     "English/Vocabulary/专业名词",
-    "English/Vocabulary/抽象类.md",
     "English/Phrase.md",
     "心理学论文.md",
     "Idea.md",
-    "Fonts.md",
     "chinese_tombs_open_book_notes_enhanced.md",
     "English/考研.md",
     "计算机/数据库 DataBase/database/第10章 事务与并发控制-解题思路与模板.md",
-    "计算机/数据库 DataBase/database/第09章 查询优化与处理-解题思路与模板.md",
     "Web Develop/Backend",
     "Collect",
     "Tools/Command",
@@ -222,9 +225,6 @@
     "assets/Pasted image 20260428231422.png",
     "assets/Pasted image 20260427234306.png",
     "assets/Pasted image 20260427234250.png",
-    "assets/Pasted image 20260427234235.png",
-    "assets/Pasted image 20260427234132.png",
-    "assets/Pasted image 20260426230451.png",
     "考研",
     "Web Develop/Frontend/JavaScript",
     "学习计划/算法题",
