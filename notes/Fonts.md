@@ -7,3 +7,5 @@ Shrikhand
 THUNDER
 Abril Fatface
 Abhaya Libre
+Monolisacode
+gioscience
