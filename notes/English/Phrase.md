@@ -8,4 +8,4 @@
 - no good deed goes unpunished 好心没好报
 - make ends meet 勉强维持生计
 - what do sb get off ... 某人凭什么...
-- 
+- give or take 差不多，大约

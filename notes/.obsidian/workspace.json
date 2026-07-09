@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Collect/素材积累.md",
+                "file": "English/Vocabulary/日常生活.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "素材积累"
+              "title": "日常生活"
             }
           }
         ]
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Collect/素材积累.md",
+                "file": "English/Vocabulary/日常生活.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 素材积累"
+              "title": "Outline of 日常生活"
             }
           }
         ],
@@ -183,11 +183,14 @@
   },
   "active": "cadc87835617f74c",
   "lastOpenFiles": [
+    "English/Vocabulary/动作.md",
+    "English/Vocabulary/日常生活.md",
+    "English/Phrase.md",
+    "Collect/素材积累.md",
     "images/Pasted image 20260708205909.png",
     "images/Pasted image 20260708205841.png",
     "Collect/积累.md",
     "English/Vocabulary/抽象类.md",
-    "English/Vocabulary/动作.md",
     "English/Vocabulary/职业与身份.md",
     "English/Vocabulary/社会与文化.md",
     "Fonts.md",
@@ -198,7 +201,6 @@
     "English/Vocabulary/科技与网络.md",
     "English/Vocabulary/其他分类.md",
     "English/Vocabulary/情感_情绪_性格_品德.md",
-    "English/Vocabulary/日常生活.md",
     "English/Vocabulary/商业与经济.md",
     "English/Vocabulary/食物与饮品.md",
     "English/Vocabulary/娱乐与爱好.md",
@@ -207,12 +209,10 @@
     "images/4cb3ef14-cd89-483e-8a1a-cc11c47fb284.png",
     "images/58541fe9-740e-4218-bef6-3bc0f3e8b956.png",
     "images/1bd41ebe-52a5-4bda-aa74-d90d0d9c35b1.png",
-    "Collect/素材积累.md",
     "English/Vocabulary/单词.md",
     "images/Pasted image 20260703222220.png",
     "images",
     "English/Vocabulary/专业名词",
-    "English/Phrase.md",
     "心理学论文.md",
     "chinese_tombs_open_book_notes_enhanced.md",
     "English/考研.md",
@@ -224,7 +224,6 @@
     "assets/Pasted image 20260428231453.png",
     "assets/Pasted image 20260428231441.png",
     "assets/Pasted image 20260428231422.png",
-    "assets/Pasted image 20260427234306.png",
     "考研",
     "Web Develop/Frontend/JavaScript",
     "学习计划/算法题",
