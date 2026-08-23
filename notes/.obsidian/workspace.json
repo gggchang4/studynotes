@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "English/Vocabulary/自然与地理.md",
+                "file": "English/考研.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "自然与地理"
+              "title": "考研"
             }
           }
         ],
@@ -169,7 +169,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "English/Vocabulary/自然与地理.md",
+                "file": "English/考研.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
@@ -200,8 +200,10 @@
   },
   "active": "a87ba925d0d16d8d",
   "lastOpenFiles": [
-    "English/Vocabulary/专业名词.md",
+    "English/Phrase.md",
     "English/考研.md",
+    "English/Vocabulary/自然与地理.md",
+    "English/Vocabulary/专业名词.md",
     "English/Vocabulary/健康与身体.md",
     "English/Vocabulary/日常生活.md",
     "English/Vocabulary/食物与饮品.md",
@@ -210,9 +212,7 @@
     "English/Vocabulary/其他分类.md",
     "English/Vocabulary/动作.md",
     "English/Vocabulary/单词.md",
-    "English/Vocabulary/自然与地理.md",
     "English/Vocabulary/抽象类.md",
-    "English/Phrase.md",
     "English/Vocabulary/商业与经济.md",
     "English/Vocabulary/娱乐与爱好.md",
     "WatchList/HBO.md",
