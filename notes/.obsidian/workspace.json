@@ -27,12 +27,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "English/Vocabulary/抽象类.md",
+                "file": "interview/工程硕博面试准备.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "抽象类"
+              "title": "工程硕博面试准备"
+            }
+          },
+          {
+            "id": "feebf9fa4b9ed1fe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "interview/三个Agent项目面试详解.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "三个Agent项目面试详解"
             }
           }
         ],
@@ -169,7 +183,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "English/Vocabulary/抽象类.md",
+                "file": "interview/工程硕博面试准备.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
@@ -200,6 +214,10 @@
   },
   "active": "a87ba925d0d16d8d",
   "lastOpenFiles": [
+    "interview/三个Agent项目面试详解.md",
+    "interview/工程硕博面试准备.md",
+    "English/Vocabulary/抽象类.md",
+    "interview",
     "English/Vocabulary/日常生活.md",
     "English/考研.md",
     "English/Phrase.md",
@@ -212,7 +230,6 @@
     "English/Vocabulary/其他分类.md",
     "English/Vocabulary/动作.md",
     "English/Vocabulary/单词.md",
-    "English/Vocabulary/抽象类.md",
     "English/Vocabulary/商业与经济.md",
     "English/Vocabulary/娱乐与爱好.md",
     "WatchList/HBO.md",
@@ -226,8 +243,6 @@
     "images/Pasted image 20260708205841.png",
     "Collect/积累.md",
     "Idea.md",
-    "English/Vocabulary/交通与旅行.md",
-    "English/Vocabulary/教育与学习.md",
     "images/4cb3ef14-cd89-483e-8a1a-cc11c47fb284.png",
     "images/58541fe9-740e-4218-bef6-3bc0f3e8b956.png",
     "images/1bd41ebe-52a5-4bda-aa74-d90d0d9c35b1.png",
@@ -245,7 +260,6 @@
     "考研",
     "Web Develop/Frontend/JavaScript",
     "学习计划/算法题",
-    "Projects/3D_AI",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
