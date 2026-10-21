@@ -2,5 +2,8 @@
   "cssTheme": "Minimal",
   "baseFontSize": 15,
   "accentColor": "#000000",
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "tech-stack-table"
+  ]
 }

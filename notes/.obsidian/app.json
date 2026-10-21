@@ -1,6 +1,6 @@
 {
   "showLineNumber": true,
-  "promptDelete": true,
+  "promptDelete": false,
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "images",
   "userIgnoreFilters": [

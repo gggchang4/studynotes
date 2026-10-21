@@ -3,6 +3,9 @@
   "obsidian-tasks-plugin",
   "templater-obsidian",
   "obsidian-style-settings",
-  "obsidian-icon-folder",
-  "obsidian-latex-suite"
+  "obsidian-latex-suite",
+  "obsidian-charts",
+  "dataview",
+  "obsidian-git",
+  "table-editor-obsidian"
 ]
