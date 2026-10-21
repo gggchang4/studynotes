@@ -1,0 +1,32 @@
+{
+  "stage": "framework",
+  "modules": 12,
+  "topic_notes": 72,
+  "markdown_files": 92,
+  "route_topics": 116,
+  "mapped_route_topics": 116,
+  "prerequisite_edges": 165,
+  "wiki_links": 1100,
+  "materials": 25,
+  "papers": 32,
+  "local_image_references": 1,
+  "rendered_previews": [
+    {
+      "background": "light",
+      "width": 1320,
+      "height": 1040
+    },
+    {
+      "background": "dark",
+      "width": 1320,
+      "height": 1040
+    }
+  ],
+  "scope": [
+    "Local Markdown links/headings, route coverage, framework outlines, source IDs and prerequisite DAG checked.",
+    "External sources were checked through browsing; this script checks URL structure and recorded evidence scope, not live HTTP.",
+    "SVG rendered with sharp 0.35.5 and visually inspected on light/dark backgrounds; Obsidian application theme switching not exercised.",
+    "Detailed prose, code execution and paper-result reproduction are intentionally deferred."
+  ],
+  "errors": []
+}

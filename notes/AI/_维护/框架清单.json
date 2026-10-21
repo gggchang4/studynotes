@@ -1,0 +1,3381 @@
+{
+  "schema_version": 1,
+  "created": "2026-10-21",
+  "scope": "AI",
+  "stage": "framework",
+  "route": "AI/机器学习与深度学习学习路线.md",
+  "modules": [
+    {
+      "num": "01",
+      "title": "数学与编程基础",
+      "scope": "概念、数学工具与计算环境",
+      "layer": "主干",
+      "folder": "01-数学与编程基础"
+    },
+    {
+      "num": "02",
+      "title": "数据与机器学习基础",
+      "scope": "数据、泛化、评估与模型选择",
+      "layer": "主干",
+      "folder": "02-数据与机器学习基础"
+    },
+    {
+      "num": "03",
+      "title": "经典机器学习算法",
+      "scope": "监督学习、无监督学习与异常检测",
+      "layer": "主干",
+      "folder": "03-经典机器学习算法"
+    },
+    {
+      "num": "04",
+      "title": "神经网络与PyTorch",
+      "scope": "网络计算、自动微分与训练闭环",
+      "layer": "主干",
+      "folder": "04-神经网络与PyTorch"
+    },
+    {
+      "num": "05",
+      "title": "训练方法与核心结构",
+      "scope": "优化、诊断、CNN、RNN 与 Transformer",
+      "layer": "主干",
+      "folder": "05-训练方法与核心结构"
+    },
+    {
+      "num": "06",
+      "title": "表示学习与迁移",
+      "scope": "重构、自监督与知识迁移",
+      "layer": "主干",
+      "folder": "06-表示学习与迁移"
+    },
+    {
+      "num": "07",
+      "title": "应用方向",
+      "scope": "视觉、语言、时序、语音、推荐、图与多模态",
+      "layer": "分支",
+      "folder": "07-应用方向"
+    },
+    {
+      "num": "08",
+      "title": "强化学习",
+      "scope": "MDP、价值方法与策略方法",
+      "layer": "分支",
+      "folder": "08-强化学习"
+    },
+    {
+      "num": "09",
+      "title": "生成模型",
+      "scope": "自回归、VAE、GAN、流与扩散",
+      "layer": "分支",
+      "folder": "09-生成模型"
+    },
+    {
+      "num": "10",
+      "title": "大语言模型",
+      "scope": "分词、预训练、微调、对齐与推理",
+      "layer": "分支",
+      "folder": "10-大语言模型"
+    },
+    {
+      "num": "11",
+      "title": "理论与概率建模拓展",
+      "scope": "学习理论、核、概率模型、解释与因果",
+      "layer": "拓展",
+      "folder": "11-理论与概率建模拓展"
+    },
+    {
+      "num": "12",
+      "title": "工程与部署",
+      "scope": "实验、压缩、推理服务与分布式训练",
+      "layer": "拓展",
+      "folder": "12-工程与部署"
+    }
+  ],
+  "topics": [
+    {
+      "id": "0101",
+      "title": "机器学习概念与任务",
+      "rows": [
+        1,
+        2,
+        3
+      ],
+      "kind": "概念",
+      "pre": [],
+      "refs": [
+        [
+          "T01",
+          "课程1：监督学习与基本概念"
+        ],
+        [
+          "T03",
+          "第1章：Introduction"
+        ]
+      ],
+      "papers": [],
+      "question": "模型从数据中学到什么，训练、验证和推理各自做什么？",
+      "focus": [
+        "用同一组样本区分特征、标签、参数与超参数。",
+        "用监督、无监督、自监督与强化学习的信号来源作比较。"
+      ],
+      "diagram": "拟配：AI、ML、DL 包含关系与训练—推理对照图。",
+      "module": "01",
+      "path": "AI/01-数学与编程基础/01-机器学习概念与任务.md"
+    },
+    {
+      "id": "0102",
+      "title": "线性代数与矩阵分解",
+      "rows": [
+        4
+      ],
+      "kind": "数学",
+      "pre": [],
+      "refs": [
+        [
+          "T05",
+          "第2–4章：线性代数、解析几何与矩阵分解"
+        ],
+        [
+          "T03",
+          "2.3 Linear Algebra；数学附录"
+        ]
+      ],
+      "papers": [],
+      "question": "向量、矩阵和投影如何成为模型表示与数据变换的工具？",
+      "focus": [
+        "给出矩阵乘法与投影的数值例子，逐步核对形状。",
+        "解释特征分解与 SVD 的条件和几何含义，并连接 PCA。"
+      ],
+      "diagram": "拟配：向量投影、线性变换与 SVD 的几何示意。",
+      "module": "01",
+      "path": "AI/01-数学与编程基础/02-线性代数与矩阵分解.md"
+    },
+    {
+      "id": "0103",
+      "title": "微积分与矩阵求导",
+      "rows": [
+        5
+      ],
+      "kind": "数学",
+      "pre": [
+        "0102"
+      ],
+      "refs": [
+        [
+          "T05",
+          "第5章：Vector Calculus"
+        ],
+        [
+          "T03",
+          "2.4 Calculus；多元微积分附录"
+        ]
+      ],
+      "papers": [],
+      "question": "如何从标量导数推广到模型中向量、矩阵与复合函数的梯度？",
+      "focus": [
+        "从单变量链式法则过渡到梯度、Jacobian 与 Hessian。",
+        "对一个小型复合函数手算梯度，并说明梯度与张量形状的关系。"
+      ],
+      "diagram": "拟配：复合函数依赖图与等高线上的梯度方向。",
+      "module": "01",
+      "path": "AI/01-数学与编程基础/03-微积分与矩阵求导.md"
+    },
+    {
+      "id": "0104",
+      "title": "概率统计与参数估计",
+      "rows": [
+        6,
+        7
+      ],
+      "kind": "数学",
+      "pre": [
+        "0102"
+      ],
+      "refs": [
+        [
+          "T05",
+          "第6章：Probability and Distributions"
+        ],
+        [
+          "T06",
+          "第3章：Probability and Information Theory"
+        ]
+      ],
+      "papers": [],
+      "question": "怎样用分布描述不确定性，并从样本估计模型参数？",
+      "focus": [
+        "区分概率、密度、似然、后验与采样误差。",
+        "用 Bernoulli 或 Gaussian 例子展开 MLE、MAP 与置信区间。"
+      ],
+      "diagram": "拟配：概率分布、似然与先验—后验更新对照图。",
+      "module": "01",
+      "path": "AI/01-数学与编程基础/04-概率统计与参数估计.md"
+    },
+    {
+      "id": "0105",
+      "title": "优化与数值计算基础",
+      "rows": [
+        8
+      ],
+      "kind": "数学",
+      "pre": [
+        "0103"
+      ],
+      "refs": [
+        [
+          "T05",
+          "第7章：Continuous Optimization"
+        ],
+        [
+          "T06",
+          "第4章：Numerical Computation"
+        ],
+        [
+          "T03",
+          "第12章：Optimization Algorithms"
+        ]
+      ],
+      "papers": [],
+      "question": "模型目标如何通过迭代优化求解，数值误差又如何影响计算？",
+      "focus": [
+        "区分目标、梯度、学习率、收敛与局部最优。",
+        "用简单二次函数展示 GD、SGD、Mini-batch，并解释 Log-sum-exp 的稳定形式。"
+      ],
+      "diagram": "拟配：损失等高线上的更新轨迹与浮点数值范围示意。",
+      "module": "01",
+      "path": "AI/01-数学与编程基础/05-优化与数值计算基础.md"
+    },
+    {
+      "id": "0106",
+      "title": "信息论与概率损失",
+      "rows": [
+        9
+      ],
+      "kind": "数学",
+      "pre": [
+        "0104"
+      ],
+      "refs": [
+        [
+          "T06",
+          "第3章：信息论相关内容"
+        ],
+        [
+          "T03",
+          "22.11 Information Theory"
+        ]
+      ],
+      "papers": [],
+      "question": "熵、交叉熵和 KL 散度如何联系到模型的学习目标？",
+      "focus": [
+        "从离散分布的数值例子解释各量，不把 KL 当成对称距离。",
+        "推导固定真实分布时交叉熵、KL 与负对数似然的联系及条件。"
+      ],
+      "diagram": "拟配：两个离散分布及三类信息量的关系图。",
+      "module": "01",
+      "path": "AI/01-数学与编程基础/06-信息论与概率损失.md"
+    },
+    {
+      "id": "0107",
+      "title": "Python与计算环境",
+      "rows": [
+        10,
+        15
+      ],
+      "kind": "工具",
+      "pre": [],
+      "refs": [
+        [
+          "T10",
+          "函数、类、模块、异常、虚拟环境"
+        ],
+        [
+          "T03",
+          "Installation；Jupyter 与 GPU 工具附录"
+        ]
+      ],
+      "papers": [],
+      "question": "哪些 Python 与环境知识直接支持机器学习代码的阅读和运行？",
+      "focus": [
+        "以数据处理函数、模型类和配置文件组织为例说明语法。",
+        "解释解释器、依赖、随机种子及 CPU/GPU、内存/显存的区别。"
+      ],
+      "diagram": "按需配：解释器—环境—依赖关系图；不为普通语法机械配图。",
+      "module": "01",
+      "path": "AI/01-数学与编程基础/07-Python与计算环境.md"
+    },
+    {
+      "id": "0108",
+      "title": "科学计算与可视化",
+      "rows": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "kind": "工具",
+      "pre": [
+        "0107",
+        "0102"
+      ],
+      "refs": [
+        [
+          "T11",
+          "数组、shape、axis、广播与向量化"
+        ],
+        [
+          "T12",
+          "表格读写、分组与连接"
+        ],
+        [
+          "T13",
+          "基础绘图与图形对象"
+        ],
+        [
+          "T14",
+          "统计、优化与线性代数"
+        ]
+      ],
+      "papers": [],
+      "question": "如何把原始数据变为可计算、可检查、可展示的数组与表格？",
+      "focus": [
+        "围绕同一张小数据表串联 NumPy、pandas、SciPy 与绘图。",
+        "解释广播、轴与索引，避免只堆 API 名称。"
+      ],
+      "diagram": "拟配：数组维度、广播对齐与表格到张量的数据流。",
+      "module": "01",
+      "path": "AI/01-数学与编程基础/08-科学计算与可视化.md"
+    },
+    {
+      "id": "0201",
+      "title": "数据理解与特征工程",
+      "rows": [
+        16,
+        18
+      ],
+      "kind": "数据",
+      "pre": [
+        "0101",
+        "0108"
+      ],
+      "refs": [
+        [
+          "T09",
+          "Dataset transformations；Preprocessing；Imputation"
+        ],
+        [
+          "T04",
+          "Statistical Learning 与模型输入相关章节"
+        ]
+      ],
+      "papers": [],
+      "question": "数据质量与特征表示怎样改变一个学习问题？",
+      "focus": [
+        "结合一份小型表格解释 EDA、缺失值、类别编码与标准化。",
+        "区分数据增强、类别权重与重采样，并说明适用条件。"
+      ],
+      "diagram": "拟配：原始数据—清洗—特征变换对照图。",
+      "module": "02",
+      "path": "AI/02-数据与机器学习基础/01-数据理解与特征工程.md"
+    },
+    {
+      "id": "0202",
+      "title": "数据划分与数据泄漏",
+      "rows": [
+        17
+      ],
+      "kind": "数据",
+      "pre": [
+        "0101"
+      ],
+      "refs": [
+        [
+          "T09",
+          "Cross-validation；Common pitfalls and recommended practices"
+        ],
+        [
+          "T02",
+          "课程3：训练、验证、测试分布与误差分析"
+        ]
+      ],
+      "papers": [],
+      "question": "怎样划分数据，才能让评估反映模型面对新样本的能力？",
+      "focus": [
+        "比较随机、分层、分组和时间划分的适用对象。",
+        "用错误与正确两条流水线解释预处理拟合、重复样本和未来信息泄漏。"
+      ],
+      "diagram": "拟配：数据集职责图与数据泄漏的错误/正确流程。",
+      "module": "02",
+      "path": "AI/02-数据与机器学习基础/02-数据划分与数据泄漏.md"
+    },
+    {
+      "id": "0203",
+      "title": "学习目标、泛化与正则化",
+      "rows": [
+        19,
+        20,
+        21
+      ],
+      "kind": "原理",
+      "pre": [
+        "0101",
+        "0104",
+        "0105"
+      ],
+      "refs": [
+        [
+          "T01",
+          "课程1–2：损失、过拟合、正则化"
+        ],
+        [
+          "T04",
+          "Statistical Learning；Linear Model Selection and Regularization"
+        ],
+        [
+          "T06",
+          "第5、7章"
+        ]
+      ],
+      "papers": [],
+      "question": "训练误差为什么不能直接代表泛化能力，模型究竟在优化什么？",
+      "focus": [
+        "区分经验风险、期望风险、参数、超参数与归纳偏置。",
+        "以同一拟合问题解释欠拟合、过拟合、偏差—方差与 L1/L2，并区分两类概率建模。"
+      ],
+      "diagram": "拟配：模型复杂度与拟合曲线、训练/泛化误差关系。",
+      "module": "02",
+      "path": "AI/02-数据与机器学习基础/03-学习目标、泛化与正则化.md"
+    },
+    {
+      "id": "0204",
+      "title": "评估指标与概率校准",
+      "rows": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "kind": "评估",
+      "pre": [
+        "0104",
+        "0202"
+      ],
+      "refs": [
+        [
+          "T09",
+          "Metrics and scoring；Probability calibration"
+        ],
+        [
+          "T01",
+          "课程2：评估与类别不平衡；课程3：推荐"
+        ]
+      ],
+      "papers": [],
+      "question": "面对回归、分类、聚类和排序任务，应当如何解释评价数字？",
+      "focus": [
+        "用一个混淆矩阵计算分类指标，并比较阈值、ROC 与 PR。",
+        "按任务解释回归、概率、聚类与排序指标的条件和误读风险。"
+      ],
+      "diagram": "拟配：混淆矩阵、ROC/PR 曲线与概率可靠性图；曲线须标明数据来源。",
+      "module": "02",
+      "path": "AI/02-数据与机器学习基础/04-评估指标与概率校准.md"
+    },
+    {
+      "id": "0205",
+      "title": "验证、模型选择与实验可信度",
+      "rows": [
+        28,
+        29,
+        30
+      ],
+      "kind": "评估",
+      "pre": [
+        "0202",
+        "0203",
+        "0204"
+      ],
+      "refs": [
+        [
+          "T04",
+          "Resampling Methods；模型选择章节"
+        ],
+        [
+          "T09",
+          "Cross-validation；Tuning hyper-parameters；Validation curves"
+        ]
+      ],
+      "papers": [],
+      "question": "模型比较和调参怎样避免对验证集、测试集逐渐过拟合？",
+      "focus": [
+        "对比留出、K 折、分组、时间和嵌套验证。",
+        "解释基线、搜索方法、学习曲线、重复实验与不确定性；不把单次高分当作稳定提升。"
+      ],
+      "diagram": "拟配：嵌套交叉验证的数据流与学习曲线。",
+      "module": "02",
+      "path": "AI/02-数据与机器学习基础/05-验证、模型选择与实验可信度.md"
+    },
+    {
+      "id": "0206",
+      "title": "scikit-learn与Pipeline",
+      "rows": [
+        40
+      ],
+      "kind": "框架",
+      "pre": [
+        "0108",
+        "0201",
+        "0202"
+      ],
+      "refs": [
+        [
+          "T09",
+          "Pipelines and composite estimators；Model persistence"
+        ],
+        [
+          "T01",
+          "课程1：NumPy 与 scikit-learn 实现入口"
+        ]
+      ],
+      "papers": [],
+      "question": "如何把预处理、模型训练与评估组织成一致且避免泄漏的流水线？",
+      "focus": [
+        "对应 fit、transform、predict 的职责展示完整调用路径。",
+        "说明 ColumnTransformer、交叉验证与保存预处理器的关系。"
+      ],
+      "diagram": "拟配：训练时 fit 与推理时 transform/predict 的双路径。",
+      "module": "02",
+      "path": "AI/02-数据与机器学习基础/06-scikit-learn与Pipeline.md"
+    },
+    {
+      "id": "0301",
+      "title": "线性回归与正则化",
+      "rows": [
+        31
+      ],
+      "kind": "算法",
+      "pre": [
+        "0102",
+        "0103",
+        "0203"
+      ],
+      "refs": [
+        [
+          "T01",
+          "课程1：Linear Regression"
+        ],
+        [
+          "T04",
+          "Linear Regression；Linear Model Selection and Regularization"
+        ],
+        [
+          "T05",
+          "第9章：Linear Regression"
+        ]
+      ],
+      "papers": [],
+      "question": "最小二乘为什么能得到线性预测模型，正则化改变了什么？",
+      "focus": [
+        "推导 MSE 梯度与闭式解，说明可逆性与数值求解的条件。",
+        "用多项式特征和 Ridge/Lasso/Elastic Net 比较拟合与稀疏性。"
+      ],
+      "diagram": "拟配：回归几何、拟合曲线与 L1/L2 约束形状。",
+      "module": "03",
+      "path": "AI/03-经典机器学习算法/01-线性回归与正则化.md"
+    },
+    {
+      "id": "0302",
+      "title": "Logistic回归、Softmax与广义线性模型",
+      "rows": [
+        32,
+        33
+      ],
+      "kind": "算法",
+      "pre": [
+        "0301",
+        "0106"
+      ],
+      "refs": [
+        [
+          "T01",
+          "课程1：Logistic Regression；课程2：多分类"
+        ],
+        [
+          "T07",
+          "Logistic Regression、Perceptron、GLM"
+        ],
+        [
+          "T09",
+          "Linear Models"
+        ]
+      ],
+      "papers": [],
+      "question": "线性打分怎样转化为类别概率，决策边界与损失怎样对应？",
+      "focus": [
+        "推导二元交叉熵的梯度，并检查 logits 与概率的区别。",
+        "连接感知机、Softmax、多分类损失与 GLM；明确多项式特征并不使参数模型失去线性。"
+      ],
+      "diagram": "拟配：决策边界、Sigmoid 与 Softmax 的输入输出。",
+      "module": "03",
+      "path": "AI/03-经典机器学习算法/02-Logistic回归、Softmax与广义线性模型.md"
+    },
+    {
+      "id": "0303",
+      "title": "近邻与Bayes分类",
+      "rows": [
+        34,
+        35
+      ],
+      "kind": "算法",
+      "pre": [
+        "0104",
+        "0201"
+      ],
+      "refs": [
+        [
+          "T04",
+          "Classification"
+        ],
+        [
+          "T07",
+          "Gaussian Discriminant Analysis；Naive Bayes；Laplace Smoothing"
+        ],
+        [
+          "T09",
+          "Nearest Neighbors；Naive Bayes；Discriminant Analysis"
+        ]
+      ],
+      "papers": [],
+      "question": "相似性投票与概率推断如何形成不同类型的分类器？",
+      "focus": [
+        "用小数据手算 KNN 与朴素 Bayes 的预测。",
+        "比较距离尺度、条件独立、LDA/QDA 假设与高维问题。"
+      ],
+      "diagram": "拟配：邻域分类、生成式分类分布与判别边界。",
+      "module": "03",
+      "path": "AI/03-经典机器学习算法/03-近邻与Bayes分类.md"
+    },
+    {
+      "id": "0304",
+      "title": "支持向量机与核方法",
+      "rows": [
+        36
+      ],
+      "kind": "算法",
+      "pre": [
+        "0102",
+        "0105",
+        "0203"
+      ],
+      "refs": [
+        [
+          "T05",
+          "第12章：Classification with Support Vector Machines"
+        ],
+        [
+          "T04",
+          "Support Vector Machines"
+        ],
+        [
+          "T09",
+          "Support Vector Machines"
+        ]
+      ],
+      "papers": [],
+      "question": "最大间隔与核技巧如何产生非线性分类和回归方法？",
+      "focus": [
+        "由几何间隔到软间隔目标，说明支持向量和 C 的作用。",
+        "先解释核的输入输出与直觉；完整对偶与 KKT 链接理论拓展。"
+      ],
+      "diagram": "拟配：间隔、支持向量与核映射的二维示意。",
+      "module": "03",
+      "path": "AI/03-经典机器学习算法/04-支持向量机与核方法.md"
+    },
+    {
+      "id": "0305",
+      "title": "决策树与集成学习",
+      "rows": [
+        37,
+        38
+      ],
+      "kind": "算法",
+      "pre": [
+        "0203",
+        "0205"
+      ],
+      "refs": [
+        [
+          "T04",
+          "Tree-Based Methods"
+        ],
+        [
+          "T01",
+          "课程2：Decision Trees and Tree Ensembles"
+        ],
+        [
+          "T09",
+          "Decision Trees；Ensembles"
+        ]
+      ],
+      "papers": [],
+      "question": "树如何递归划分特征空间，多个弱模型如何组成更稳定的预测？",
+      "focus": [
+        "手算一次信息增益或 Gini 划分，并比较分类树与回归树。",
+        "对比 Bagging、随机森林、OOB、Boosting 与 AdaBoost 的数据和误差利用方式。"
+      ],
+      "diagram": "拟配：特征空间与树结构对应图、Bagging/Boosting 对照流程。",
+      "module": "03",
+      "path": "AI/03-经典机器学习算法/05-决策树与集成学习.md"
+    },
+    {
+      "id": "0306",
+      "title": "提升树与模型组合",
+      "rows": [
+        39
+      ],
+      "kind": "算法",
+      "pre": [
+        "0305",
+        "0105"
+      ],
+      "refs": [
+        [
+          "T09",
+          "Gradient boosting；Voting；Stacking"
+        ],
+        [
+          "T04",
+          "Tree-Based Methods 与提升方法"
+        ]
+      ],
+      "papers": [
+        "P01"
+      ],
+      "question": "梯度提升、工程化树系统与模型组合分别解决哪些问题？",
+      "focus": [
+        "解释 GBDT 的逐步加法拟合，区分理论目标与系统优化。",
+        "对照 XGBoost、LightGBM、CatBoost 及 Voting/Stacking；涉及具体特性时补各项目固定版本文档。"
+      ],
+      "diagram": "拟配：逐轮残差或负梯度拟合、Stacking 防泄漏数据流。",
+      "module": "03",
+      "path": "AI/03-经典机器学习算法/06-提升树与模型组合.md"
+    },
+    {
+      "id": "0307",
+      "title": "聚类算法与结果解释",
+      "rows": [
+        41
+      ],
+      "kind": "算法",
+      "pre": [
+        "0102",
+        "0201",
+        "0204"
+      ],
+      "refs": [
+        [
+          "T01",
+          "课程3：Clustering"
+        ],
+        [
+          "T09",
+          "Clustering"
+        ],
+        [
+          "T04",
+          "Unsupervised Learning"
+        ]
+      ],
+      "papers": [],
+      "question": "没有标签时，距离、密度和连接关系分别定义了什么样的簇？",
+      "focus": [
+        "用相同二维样本比较 K-means、层次聚类和 DBSCAN。",
+        "说明 K、密度参数、尺度与高维问题，解释轮廓系数等指标的限制。"
+      ],
+      "diagram": "拟配：三种聚类在球状、非凸与带噪数据上的对照。",
+      "module": "03",
+      "path": "AI/03-经典机器学习算法/07-聚类算法与结果解释.md"
+    },
+    {
+      "id": "0308",
+      "title": "降维与低维可视化",
+      "rows": [
+        42
+      ],
+      "kind": "算法",
+      "pre": [
+        "0102",
+        "0204"
+      ],
+      "refs": [
+        [
+          "T05",
+          "第10章：PCA"
+        ],
+        [
+          "T09",
+          "Decomposing signals；Manifold learning"
+        ],
+        [
+          "T04",
+          "Unsupervised Learning"
+        ]
+      ],
+      "papers": [],
+      "question": "低维表示保留了什么，二维图又有哪些不能据此下结论的地方？",
+      "focus": [
+        "由方差最大化或重构误差推导 PCA 与 SVD 的联系。",
+        "比较 PCA、t-SNE、UMAP；扩写时补各方法原始论文，不从可视化距离直接推断全局语义。"
+      ],
+      "diagram": "拟配：PCA 投影与局部/全局结构保留对照。",
+      "module": "03",
+      "path": "AI/03-经典机器学习算法/08-降维与低维可视化.md"
+    },
+    {
+      "id": "0309",
+      "title": "密度估计、隐变量与EM",
+      "rows": [
+        43
+      ],
+      "kind": "算法",
+      "pre": [
+        "0104",
+        "0105"
+      ],
+      "refs": [
+        [
+          "T05",
+          "第11章：GMM"
+        ],
+        [
+          "T07",
+          "Mixture of Gaussians；The EM Algorithm"
+        ],
+        [
+          "T09",
+          "Gaussian mixture models；Density estimation"
+        ]
+      ],
+      "papers": [],
+      "question": "无法直接观察的变量怎样参与概率建模和参数学习？",
+      "focus": [
+        "从单分布、KDE 到 GMM，区分聚类与密度拟合目的。",
+        "推导 E/M 两步的对象与更新逻辑，说明局部最优和初始化。"
+      ],
+      "diagram": "拟配：混合分布、软责任度与 EM 交替更新。",
+      "module": "03",
+      "path": "AI/03-经典机器学习算法/09-密度估计、隐变量与EM.md"
+    },
+    {
+      "id": "0310",
+      "title": "异常检测",
+      "rows": [
+        44
+      ],
+      "kind": "算法",
+      "pre": [
+        "0204",
+        "0307",
+        "0309"
+      ],
+      "refs": [
+        [
+          "T01",
+          "课程3：Anomaly Detection"
+        ],
+        [
+          "T09",
+          "Novelty and Outlier Detection"
+        ],
+        [
+          "T06",
+          "第14章：重构模型相关内容"
+        ]
+      ],
+      "papers": [],
+      "question": "异常分数与决策阈值怎样对应到罕见样本识别？",
+      "focus": [
+        "比较统计、距离/密度、Isolation Forest、One-class SVM 与重构误差。",
+        "区分离群检测与新颖性检测，并说明评估标签和阈值选择问题。"
+      ],
+      "diagram": "拟配：正常区域、异常分数分布与阈值。",
+      "module": "03",
+      "path": "AI/03-经典机器学习算法/10-异常检测.md"
+    },
+    {
+      "id": "0401",
+      "title": "多层感知机与激活函数",
+      "rows": [
+        45
+      ],
+      "kind": "架构",
+      "pre": [
+        "0302",
+        "0103"
+      ],
+      "refs": [
+        [
+          "T03",
+          "第5章：Multilayer Perceptrons"
+        ],
+        [
+          "T02",
+          "课程1：Neural Networks and Deep Learning"
+        ],
+        [
+          "T06",
+          "第6章：Deep Feedforward Networks"
+        ]
+      ],
+      "papers": [],
+      "question": "非线性隐藏层如何将线性打分扩展为可学习的层次表示？",
+      "focus": [
+        "跟踪一个小 MLP 的权重、偏置、激活与批量形状。",
+        "比较 Sigmoid、Tanh、ReLU、GELU，解释表达能力而非只画网络外观。"
+      ],
+      "diagram": "拟配：带张量尺寸的 MLP 与激活函数曲线。",
+      "module": "04",
+      "path": "AI/04-神经网络与PyTorch/01-多层感知机与激活函数.md"
+    },
+    {
+      "id": "0402",
+      "title": "损失函数、反向传播与梯度检验",
+      "rows": [
+        46,
+        47
+      ],
+      "kind": "原理",
+      "pre": [
+        "0401",
+        "0103",
+        "0106"
+      ],
+      "refs": [
+        [
+          "T03",
+          "5.3 前向、反向传播与计算图"
+        ],
+        [
+          "T02",
+          "课程1–2：Backpropagation；Gradient Checking"
+        ],
+        [
+          "T06",
+          "第6章：反向传播相关内容"
+        ]
+      ],
+      "papers": [],
+      "question": "损失如何沿计算图产生每个参数的梯度，如何检查它算得对不对？",
+      "focus": [
+        "完整手算一个小网络的前向、损失与反向梯度，逐步标注形状。",
+        "区分自动微分与数值差分；清零放在反向前或参数更新后，解释梯度累积。"
+      ],
+      "diagram": "拟配：前向与反向双色计算图、梯度检验对照。",
+      "module": "04",
+      "path": "AI/04-神经网络与PyTorch/02-损失函数、反向传播与梯度检验.md"
+    },
+    {
+      "id": "0403",
+      "title": "初始化与梯度问题",
+      "rows": [
+        48
+      ],
+      "kind": "训练",
+      "pre": [
+        "0402"
+      ],
+      "refs": [
+        [
+          "T03",
+          "5.4 Numerical Stability and Initialization"
+        ],
+        [
+          "T02",
+          "课程2：初始化与梯度消失/爆炸"
+        ]
+      ],
+      "papers": [],
+      "question": "为什么层数增加后梯度和激活的尺度会失控？",
+      "focus": [
+        "用链式乘积解释饱和、梯度消失与爆炸。",
+        "连接输入尺度、Xavier/He 初始化与激活选择，并说明推导假设。"
+      ],
+      "diagram": "拟配：深度与激活/梯度尺度的概念图；模拟曲线标明模拟条件。",
+      "module": "04",
+      "path": "AI/04-神经网络与PyTorch/03-初始化与梯度问题.md"
+    },
+    {
+      "id": "0404",
+      "title": "PyTorch张量与自动微分",
+      "rows": [
+        49,
+        50
+      ],
+      "kind": "框架",
+      "pre": [
+        "0108",
+        "0402"
+      ],
+      "refs": [
+        [
+          "T08",
+          "Tensors；Automatic Differentiation"
+        ],
+        [
+          "T03",
+          "2.1 数据操作；2.5 自动微分"
+        ]
+      ],
+      "papers": [],
+      "question": "如何把数学计算图表达为可自动求导、可移动设备的张量程序？",
+      "focus": [
+        "用同一标量函数对照手算梯度与 autograd。",
+        "解释 dtype、device、广播、requires_grad、detach、原地操作和计算图生命周期。"
+      ],
+      "diagram": "拟配：张量形状变换与计算图截断示意。",
+      "module": "04",
+      "path": "AI/04-神经网络与PyTorch/04-PyTorch张量与自动微分.md"
+    },
+    {
+      "id": "0405",
+      "title": "PyTorch模型、数据与训练循环",
+      "rows": [
+        51,
+        52
+      ],
+      "kind": "框架",
+      "pre": [
+        "0404",
+        "0202"
+      ],
+      "refs": [
+        [
+          "T08",
+          "Datasets；Transforms；Build Model；Optimization"
+        ],
+        [
+          "T03",
+          "第6章：Layers and Modules；参数管理"
+        ]
+      ],
+      "papers": [],
+      "question": "数据批次如何经过模型、损失、梯度与优化器完成一次更新？",
+      "focus": [
+        "逐步对应 Dataset/DataLoader、nn.Module、forward 与参数注册。",
+        "区分 train/eval 和 no_grad/inference_mode，写清训练与验证的路径。"
+      ],
+      "diagram": "拟配：包含张量尺寸、清零、反向与更新顺序的训练流程。",
+      "module": "04",
+      "path": "AI/04-神经网络与PyTorch/05-PyTorch模型、数据与训练循环.md"
+    },
+    {
+      "id": "0406",
+      "title": "模型保存、恢复与资源分析",
+      "rows": [
+        53,
+        54
+      ],
+      "kind": "框架",
+      "pre": [
+        "0405"
+      ],
+      "refs": [
+        [
+          "T08",
+          "Save and Load Model"
+        ],
+        [
+          "T03",
+          "6.6 File I/O；第13章 Computational Performance"
+        ]
+      ],
+      "papers": [],
+      "question": "模型产物保存了什么，恢复训练和推理各需要哪些状态？",
+      "focus": [
+        "区分权重文件、优化器状态、调度器状态与配置。",
+        "解释参数量、显存、数据加载与 GPU 利用率；扩写时锁定运行环境。"
+      ],
+      "diagram": "拟配：Checkpoint 内容结构与内存/显存占用组成。",
+      "module": "04",
+      "path": "AI/04-神经网络与PyTorch/06-模型保存、恢复与资源分析.md"
+    },
+    {
+      "id": "0501",
+      "title": "优化器与学习率调度",
+      "rows": [
+        55
+      ],
+      "kind": "训练",
+      "pre": [
+        "0405",
+        "0105"
+      ],
+      "refs": [
+        [
+          "T03",
+          "第12章：优化算法与学习率调度"
+        ],
+        [
+          "T02",
+          "课程2：Momentum、RMSProp、Adam"
+        ]
+      ],
+      "papers": [
+        "P02",
+        "P03"
+      ],
+      "question": "不同更新规则和学习率策略如何改变训练轨迹？",
+      "focus": [
+        "并列写出 SGD、Momentum、AdaGrad、RMSProp、Adam、AdamW 的更新对象与状态。",
+        "明确 Batch/Epoch/Step、Warmup 与衰减；不宣称某个优化器对所有任务最优。"
+      ],
+      "diagram": "拟配：优化器状态流与统一坐标上的学习率曲线。",
+      "module": "05",
+      "path": "AI/05-训练方法与核心结构/01-优化器与学习率调度.md"
+    },
+    {
+      "id": "0502",
+      "title": "梯度控制与混合精度",
+      "rows": [
+        56
+      ],
+      "kind": "训练",
+      "pre": [
+        "0405",
+        "0403"
+      ],
+      "refs": [
+        [
+          "T08",
+          "训练循环与自动微分；由官方教程进入混合精度文档"
+        ],
+        [
+          "T19",
+          "Systems、resource accounting 与数值相关讲义"
+        ]
+      ],
+      "papers": [
+        "P03"
+      ],
+      "question": "如何在稳定性、数值精度和显存之间安排梯度计算？",
+      "focus": [
+        "解释梯度裁剪、累积与混合精度各自改变什么、保持什么。",
+        "结合权重衰减与 L2 的区别说明更新顺序，运行示例注明 dtype 与设备。"
+      ],
+      "diagram": "拟配：梯度累积窗口与混合精度的数据类型流。",
+      "module": "05",
+      "path": "AI/05-训练方法与核心结构/02-梯度控制与混合精度.md"
+    },
+    {
+      "id": "0503",
+      "title": "正则化、归一化与残差连接",
+      "rows": [
+        57
+      ],
+      "kind": "训练",
+      "pre": [
+        "0403",
+        "0405"
+      ],
+      "refs": [
+        [
+          "T02",
+          "课程2：Regularization、Batch Normalization"
+        ],
+        [
+          "T06",
+          "第7章：Regularization"
+        ],
+        [
+          "T03",
+          "8.5 Batch Normalization；8.6 ResNet"
+        ]
+      ],
+      "papers": [
+        "P04",
+        "P05"
+      ],
+      "question": "泛化控制、数值归一化与结构设计怎样共同影响训练？",
+      "focus": [
+        "比较 Dropout、早停、增强、标签平滑及 BatchNorm/LayerNorm 的统计轴。",
+        "说明训练与推理差异；残差块按数学函数与形状解释，不只列网络名称。"
+      ],
+      "diagram": "拟配：归一化轴对照与带维度匹配的残差块。",
+      "module": "05",
+      "path": "AI/05-训练方法与核心结构/03-正则化、归一化与残差连接.md"
+    },
+    {
+      "id": "0504",
+      "title": "训练诊断与实验分析",
+      "rows": [
+        58,
+        59
+      ],
+      "kind": "训练",
+      "pre": [
+        "0205",
+        "0405",
+        "0501"
+      ],
+      "refs": [
+        [
+          "T02",
+          "课程3：误差分析、分布不匹配与端到端学习"
+        ],
+        [
+          "T06",
+          "第11章：Practical Methodology"
+        ]
+      ],
+      "papers": [],
+      "question": "怎样从指标、曲线、错误样本和对照实验定位模型问题？",
+      "focus": [
+        "结合欠拟合、过拟合、NaN、显存不足解释诊断顺序及证据。",
+        "区分人类基线、可避免偏差与数据不匹配；消融实验保持其他条件可比。"
+      ],
+      "diagram": "拟配：训练诊断决策图；曲线标清实测、复现或示意。",
+      "module": "05",
+      "path": "AI/05-训练方法与核心结构/04-训练诊断与实验分析.md"
+    },
+    {
+      "id": "0505",
+      "title": "卷积神经网络与典型结构",
+      "rows": [
+        60,
+        61
+      ],
+      "kind": "架构",
+      "pre": [
+        "0401",
+        "0503"
+      ],
+      "refs": [
+        [
+          "T03",
+          "第7–8章：CNN 与现代卷积网络"
+        ],
+        [
+          "T02",
+          "课程4：Convolutional Neural Networks"
+        ],
+        [
+          "T15",
+          "CNN、架构与视觉表示相关讲义"
+        ]
+      ],
+      "papers": [
+        "P05"
+      ],
+      "question": "卷积的局部连接和权重共享如何形成图像中的层次表示？",
+      "focus": [
+        "推导输出尺寸和感受野，区分通道、步幅、填充与池化。",
+        "比较 LeNet/AlexNet/VGG/ResNet 与 Inception/DenseNet/MobileNet，解释 1×1、空洞和深度可分离卷积。"
+      ],
+      "diagram": "拟配：卷积滑动、通道计算与不同网络块的结构对照。",
+      "module": "05",
+      "path": "AI/05-训练方法与核心结构/05-卷积神经网络与典型结构.md"
+    },
+    {
+      "id": "0506",
+      "title": "RNN、LSTM与序列建模",
+      "rows": [
+        62
+      ],
+      "kind": "架构",
+      "pre": [
+        "0402",
+        "0403"
+      ],
+      "refs": [
+        [
+          "T03",
+          "第9–10章：RNN 与现代循环网络"
+        ],
+        [
+          "T02",
+          "课程5：Sequence Models"
+        ],
+        [
+          "T06",
+          "第10章：Sequence Modeling"
+        ]
+      ],
+      "papers": [],
+      "question": "序列依赖如何被状态递推表示，门控结构缓解了哪些问题？",
+      "focus": [
+        "展开 RNN 与 BPTT，再说明 LSTM/GRU 的门与状态。",
+        "比较双向网络、Seq2Seq、Teacher Forcing、Padding/Mask 及因果限制。"
+      ],
+      "diagram": "拟配：时间展开、门控单元与编码器—解码器。",
+      "module": "05",
+      "path": "AI/05-训练方法与核心结构/06-RNN、LSTM与序列建模.md"
+    },
+    {
+      "id": "0507",
+      "title": "注意力机制与Transformer",
+      "rows": [
+        63,
+        64,
+        65
+      ],
+      "kind": "架构",
+      "pre": [
+        "0405",
+        "0102"
+      ],
+      "refs": [
+        [
+          "T03",
+          "第11章：Attention Mechanisms and Transformers"
+        ],
+        [
+          "T16",
+          "Attention、Transformer 与语言建模相关讲义"
+        ]
+      ],
+      "papers": [
+        "P06"
+      ],
+      "question": "模型怎样通过注意力选择信息，多头结构与掩码如何约束计算？",
+      "focus": [
+        "逐步计算一个小型 Q/K/V 例子，说明缩放、Softmax 与多头形状。",
+        "对照三类 Transformer、位置编码、残差/归一化，以及训练、自回归推理和复杂度。"
+      ],
+      "diagram": "拟配：带 B/H/N/D 维度的注意力数据流、两类 Mask 与三种结构。",
+      "module": "05",
+      "related": [
+        "0506"
+      ],
+      "path": "AI/05-训练方法与核心结构/07-注意力机制与Transformer.md"
+    },
+    {
+      "id": "0601",
+      "title": "Embedding、度量学习与自编码器",
+      "rows": [
+        66
+      ],
+      "kind": "原理",
+      "pre": [
+        "0405",
+        "0106"
+      ],
+      "refs": [
+        [
+          "T06",
+          "第14–15章：Autoencoders 与 Representation Learning"
+        ],
+        [
+          "T03",
+          "第15章：词嵌入与相似度相关内容"
+        ]
+      ],
+      "papers": [],
+      "question": "可学习表示如何把相似性或重构目标编码到向量空间？",
+      "focus": [
+        "比较距离、相似度、重构目标与度量学习的训练信号。",
+        "区分普通自编码器和去噪自编码器，不混同 VAE 的概率目标。"
+      ],
+      "diagram": "拟配：潜在表示、邻域关系与重构路径。",
+      "module": "06",
+      "path": "AI/06-表示学习与迁移/01-Embedding、度量学习与自编码器.md"
+    },
+    {
+      "id": "0602",
+      "title": "自监督与对比学习",
+      "rows": [
+        67
+      ],
+      "kind": "原理",
+      "pre": [
+        "0601",
+        "0507"
+      ],
+      "refs": [
+        [
+          "T06",
+          "第15章：表示学习基础"
+        ],
+        [
+          "T03",
+          "第15章：BERT 等自监督预训练入口"
+        ]
+      ],
+      "papers": [
+        "P07",
+        "P12"
+      ],
+      "question": "没有人工标签时，监督信号如何从数据自身构造出来？",
+      "focus": [
+        "区分对比、掩码和预测式任务，解释正负样本与表示坍塌。",
+        "对比 SimCLR 与掩码语言建模，写清增强方式为何影响学到的表示。"
+      ],
+      "diagram": "拟配：双视图对比学习与掩码预测两种流程。",
+      "module": "06",
+      "path": "AI/06-表示学习与迁移/02-自监督与对比学习.md"
+    },
+    {
+      "id": "0603",
+      "title": "迁移、领域适应与持续学习",
+      "rows": [
+        68,
+        69
+      ],
+      "kind": "原理",
+      "pre": [
+        "0405",
+        "0601",
+        "0205"
+      ],
+      "refs": [
+        [
+          "T02",
+          "课程3：Transfer 与 Multi-task Learning"
+        ],
+        [
+          "T03",
+          "14.2 Fine-Tuning；4.7 Distribution Shift"
+        ]
+      ],
+      "papers": [],
+      "question": "预训练知识如何被复用，又会在领域变化和持续更新中遇到什么限制？",
+      "focus": [
+        "对照冻结、特征提取、线性探测与全量微调。",
+        "区分少样本、领域适应、多任务和持续学习，明确灾难性遗忘及评估对象。"
+      ],
+      "diagram": "拟配：预训练—下游适配与领域分布变化。",
+      "module": "06",
+      "path": "AI/06-表示学习与迁移/03-迁移、领域适应与持续学习.md"
+    },
+    {
+      "id": "0701",
+      "title": "视觉分类、评价与风格迁移",
+      "rows": [
+        70,
+        73
+      ],
+      "kind": "方向",
+      "pre": [
+        "0505",
+        "0507",
+        "0603",
+        "0204"
+      ],
+      "refs": [
+        [
+          "T15",
+          "视觉分类与模型设计讲义"
+        ],
+        [
+          "T03",
+          "11.8 ViT；第14章视觉与 Neural Style Transfer"
+        ],
+        [
+          "T02",
+          "课程4：视觉任务与风格迁移"
+        ]
+      ],
+      "papers": [
+        "P08"
+      ],
+      "question": "视觉分类的表示与评价如何组织，风格迁移又使用了怎样的目标？",
+      "focus": [
+        "连接 CNN、ViT、迁移学习与数据增强。",
+        "区分分类、检测、分割指标；风格迁移单独说明内容/风格目标，不与分类损失混用。"
+      ],
+      "diagram": "拟配：图像 patch、视觉任务输出与特征驱动的风格迁移路径。",
+      "module": "07",
+      "path": "AI/07-应用方向/01-视觉分类、评价与风格迁移.md"
+    },
+    {
+      "id": "0702",
+      "title": "目标检测与图像分割",
+      "rows": [
+        71,
+        72
+      ],
+      "kind": "方向",
+      "pre": [
+        "0505",
+        "0701"
+      ],
+      "refs": [
+        [
+          "T03",
+          "第14章：Detection、Bounding Boxes、Segmentation、Transposed Convolution"
+        ],
+        [
+          "T15",
+          "检测与分割相关讲义"
+        ]
+      ],
+      "papers": [
+        "P09",
+        "P10"
+      ],
+      "question": "检测框与像素级预测如何定义任务、模型输出和评价？",
+      "focus": [
+        "比较单/两阶段检测、IoU、NMS 与区域建议。",
+        "区分语义/实例分割，说明 FCN、U-Net 与转置卷积的计算含义。"
+      ],
+      "diagram": "拟配：框/像素标签、检测流程与 U-Net 跳跃连接。",
+      "module": "07",
+      "path": "AI/07-应用方向/02-目标检测与图像分割.md"
+    },
+    {
+      "id": "0703",
+      "title": "文本表示与自然语言处理任务",
+      "rows": [
+        74,
+        75
+      ],
+      "kind": "方向",
+      "pre": [
+        "0506",
+        "0507",
+        "0601"
+      ],
+      "refs": [
+        [
+          "T16",
+          "Word Vectors、Language Models 与序列任务讲义"
+        ],
+        [
+          "T03",
+          "第15–16章：NLP 预训练与应用"
+        ],
+        [
+          "T09",
+          "Feature extraction：文本特征"
+        ]
+      ],
+      "papers": [
+        "P11",
+        "P12"
+      ],
+      "question": "词袋、静态词向量与上下文表示怎样支撑不同语言任务？",
+      "focus": [
+        "比较 TF-IDF、word2vec、GloVe 与 BERT，说明表示的粒度和训练信号。",
+        "按输入/输出形态区分分类、NER、翻译、摘要、问答与信息抽取。"
+      ],
+      "diagram": "拟配：静态/上下文向量与序列级、Token 级任务输出。",
+      "module": "07",
+      "path": "AI/07-应用方向/03-文本表示与自然语言处理任务.md"
+    },
+    {
+      "id": "0704",
+      "title": "文本检索与排序",
+      "rows": [
+        76
+      ],
+      "kind": "方向",
+      "pre": [
+        "0601",
+        "0204",
+        "0703"
+      ],
+      "refs": [
+        [
+          "T16",
+          "文本匹配、问答与表示相关讲义"
+        ],
+        [
+          "T01",
+          "课程3：基于内容推荐与相似度"
+        ],
+        [
+          "T09",
+          "文本特征与评价相关章节"
+        ]
+      ],
+      "papers": [],
+      "question": "候选召回与精细排序怎样配合，检索结果如何评价？",
+      "focus": [
+        "对照双塔召回、交互式重排序与语义相似度。",
+        "衔接 Recall@K、MRR、NDCG；扩写时补与具体检索模型对应的原始论文。"
+      ],
+      "diagram": "拟配：Query—候选召回—重排序的数据流。",
+      "module": "07",
+      "path": "AI/07-应用方向/04-文本检索与排序.md"
+    },
+    {
+      "id": "0705",
+      "title": "时间序列预测",
+      "rows": [
+        77
+      ],
+      "kind": "方向",
+      "pre": [
+        "0202",
+        "0204",
+        "0506"
+      ],
+      "refs": [
+        [
+          "T21",
+          "第2–5章：图形、分解与预测工具；第9章：ARIMA"
+        ],
+        [
+          "T03",
+          "9.1 Working with Sequences"
+        ]
+      ],
+      "papers": [],
+      "question": "时间依赖、预测窗口和验证方式怎样共同决定预测问题？",
+      "focus": [
+        "解释趋势、季节性、平稳性、自相关和滑动窗口。",
+        "比较 ARIMA 与神经时序模型；展开滚动验证、未来泄漏、多步预测和区间。"
+      ],
+      "diagram": "拟配：时间轴上的输入窗口、预测范围与滚动验证。",
+      "module": "07",
+      "path": "AI/07-应用方向/05-时间序列预测.md"
+    },
+    {
+      "id": "0706",
+      "title": "音频与语音基础",
+      "rows": [
+        78
+      ],
+      "kind": "方向",
+      "pre": [
+        "0108",
+        "0506",
+        "0507"
+      ],
+      "refs": [
+        [
+          "T22",
+          "Unit1 音频数据；Unit3–6 架构、ASR 与 TTS"
+        ],
+        [
+          "T14",
+          "Signal Processing 与 FFT"
+        ]
+      ],
+      "papers": [],
+      "question": "波形如何变为模型可处理的表示，识别与合成的目标有何区别？",
+      "focus": [
+        "连接采样、频谱、STFT 与 Mel 频谱，注明时间/频率轴。",
+        "用数据表示和输入输出说明 ASR 与 TTS，不把语音任务等同于普通文本任务。"
+      ],
+      "diagram": "拟配：波形—时频图—Mel 表示及 ASR/TTS 对照。",
+      "module": "07",
+      "path": "AI/07-应用方向/06-音频与语音基础.md"
+    },
+    {
+      "id": "0707",
+      "title": "推荐系统",
+      "rows": [
+        79
+      ],
+      "kind": "方向",
+      "pre": [
+        "0301",
+        "0601",
+        "0204"
+      ],
+      "refs": [
+        [
+          "T01",
+          "课程3：Collaborative Filtering 与 Content-based Recommendation"
+        ],
+        [
+          "T03",
+          "第21章：Recommender Systems"
+        ]
+      ],
+      "papers": [],
+      "question": "用户、物品与反馈怎样形成候选召回和个性化排序？",
+      "focus": [
+        "比较协同过滤、矩阵分解、基于内容与双塔方法。",
+        "解释隐反馈、负采样、冷启动、曝光偏差与离线排序评估。"
+      ],
+      "diagram": "拟配：用户—物品矩阵分解与推荐多阶段流程。",
+      "module": "07",
+      "path": "AI/07-应用方向/07-推荐系统.md"
+    },
+    {
+      "id": "0708",
+      "title": "图学习与图神经网络",
+      "rows": [
+        80
+      ],
+      "kind": "方向",
+      "pre": [
+        "0102",
+        "0405",
+        "0507"
+      ],
+      "refs": [
+        [
+          "T17",
+          "Graph representations 与 GNN 相关讲义"
+        ],
+        [
+          "T06",
+          "第16章仅用于结构化概率背景，不替代 GNN 教程"
+        ]
+      ],
+      "papers": [
+        "P14"
+      ],
+      "question": "节点、边与邻域聚合如何构成可学习的图表示？",
+      "focus": [
+        "解释消息传递、节点/边/图任务与邻域采样。",
+        "对照 GCN、GraphSAGE、GAT；扩写时补后两者原始论文与对应讲义。"
+      ],
+      "diagram": "拟配：小图上的逐层消息传递与任务输出。",
+      "module": "07",
+      "path": "AI/07-应用方向/08-图学习与图神经网络.md"
+    },
+    {
+      "id": "0709",
+      "title": "多模态表示与视觉语言模型",
+      "rows": [
+        81,
+        82
+      ],
+      "kind": "方向",
+      "pre": [
+        "0602",
+        "0507",
+        "0701",
+        "0703"
+      ],
+      "refs": [
+        [
+          "T15",
+          "视觉表示与多模态相关入口"
+        ],
+        [
+          "T16",
+          "语言表示与多模态相关入口"
+        ]
+      ],
+      "papers": [
+        "P13"
+      ],
+      "question": "不同模态如何在表示、对齐、融合和生成层面协同？",
+      "focus": [
+        "解释图文对齐、对比学习与跨模态注意力。",
+        "比较检索、理解、生成的输入输出与评价，不把 CLIP 等同于所有视觉语言模型。"
+      ],
+      "diagram": "拟配：双编码器对齐与融合式视觉语言模型对照。",
+      "module": "07",
+      "path": "AI/07-应用方向/09-多模态表示与视觉语言模型.md"
+    },
+    {
+      "id": "0801",
+      "title": "MDP、价值函数与基本决策方法",
+      "rows": [
+        83,
+        84
+      ],
+      "kind": "原理",
+      "pre": [
+        "0104",
+        "0105",
+        "0101"
+      ],
+      "refs": [
+        [
+          "T20",
+          "MDP、Dynamic Programming、Monte Carlo、Temporal-Difference 相关章"
+        ],
+        [
+          "T03",
+          "第17章：Reinforcement Learning"
+        ],
+        [
+          "T07",
+          "MDPs 与 Bellman Equations"
+        ]
+      ],
+      "papers": [],
+      "question": "长期回报、策略与价值怎样描述智能体在环境中的连续决策？",
+      "focus": [
+        "从小型状态转移表定义 MDP，展开 Bellman 期望与最优关系。",
+        "比较价值/策略迭代、MC/TD、探索利用和 On/Off-policy。"
+      ],
+      "diagram": "拟配：Agent—环境闭环、MDP 小图与价值备份。",
+      "module": "08",
+      "path": "AI/08-强化学习/01-MDP、价值函数与基本决策方法.md"
+    },
+    {
+      "id": "0802",
+      "title": "Q-learning与DQN",
+      "rows": [
+        85
+      ],
+      "kind": "算法",
+      "pre": [
+        "0801",
+        "0405"
+      ],
+      "refs": [
+        [
+          "T20",
+          "TD 与函数近似相关章"
+        ],
+        [
+          "T03",
+          "17.3 Q-Learning"
+        ],
+        [
+          "T08",
+          "由官方教程索引进入 DQN 专题"
+        ]
+      ],
+      "papers": [
+        "P15"
+      ],
+      "question": "动作价值怎样从表格更新扩展为神经网络近似？",
+      "focus": [
+        "用一次转移手算 TD 目标与 Q 更新。",
+        "以 2015 DQN 为基准解释经验回放与目标网络，不与 2013 初版混写。"
+      ],
+      "diagram": "拟配：Q 表更新与在线网络/目标网络训练流。",
+      "module": "08",
+      "path": "AI/08-强化学习/02-Q-learning与DQN.md"
+    },
+    {
+      "id": "0803",
+      "title": "策略梯度、Actor-Critic与PPO",
+      "rows": [
+        86,
+        87
+      ],
+      "kind": "算法",
+      "pre": [
+        "0801",
+        "0402",
+        "0802"
+      ],
+      "refs": [
+        [
+          "T20",
+          "Policy Gradient Methods 与 Actor-Critic 相关章"
+        ],
+        [
+          "T07",
+          "Policy Search 与 REINFORCE"
+        ],
+        [
+          "T19",
+          "Alignment 与 reasoning RL 相关讲义"
+        ]
+      ],
+      "papers": [
+        "P16"
+      ],
+      "question": "如何直接优化策略，价值估计和更新约束分别起什么作用？",
+      "focus": [
+        "解释 REINFORCE、基线、优势与 Actor-Critic，再进入 PPO。",
+        "区分在线/离线、模型式/无模型，说明奖励、样本效率、稳定性和评价；离线 RL 不沿用在线评估假设。"
+      ],
+      "diagram": "拟配：Actor/Critic 双网络与采样—更新闭环。",
+      "module": "08",
+      "path": "AI/08-强化学习/03-策略梯度、Actor-Critic与PPO.md"
+    },
+    {
+      "id": "0901",
+      "title": "生成建模与自回归模型",
+      "rows": [
+        88,
+        89
+      ],
+      "kind": "原理",
+      "pre": [
+        "0104",
+        "0106",
+        "0507"
+      ],
+      "refs": [
+        [
+          "T18",
+          "Introduction 与 Autoregressive Models"
+        ],
+        [
+          "T06",
+          "第20章：Deep Generative Models"
+        ],
+        [
+          "T03",
+          "9.3 Language Models"
+        ]
+      ],
+      "papers": [],
+      "question": "联合概率如何被分解为条件概率，模型如何据此逐步生成？",
+      "focus": [
+        "从概率链式法则连接似然训练与祖先采样。",
+        "区分无条件、条件与潜变量建模；给出训练和采样的数据依赖。"
+      ],
+      "diagram": "拟配：联合分布分解与因果生成顺序。",
+      "module": "09",
+      "path": "AI/09-生成模型/01-生成建模与自回归模型.md"
+    },
+    {
+      "id": "0902",
+      "title": "变分自编码器VAE",
+      "rows": [
+        90
+      ],
+      "kind": "算法",
+      "pre": [
+        "0601",
+        "0104",
+        "0106",
+        "0901"
+      ],
+      "refs": [
+        [
+          "T18",
+          "Variational Autoencoders 与 variational inference"
+        ],
+        [
+          "T06",
+          "第19–20章：近似推断与生成模型"
+        ]
+      ],
+      "papers": [
+        "P17"
+      ],
+      "question": "难以直接计算后验和似然时，如何用变分下界训练潜变量模型？",
+      "focus": [
+        "逐步推导 ELBO 并解释每一项与近似后验。",
+        "说明重参数化与梯度路径，区分重构和概率生成。"
+      ],
+      "diagram": "拟配：生成路径、推断路径与重参数化采样。",
+      "module": "09",
+      "path": "AI/09-生成模型/02-变分自编码器VAE.md"
+    },
+    {
+      "id": "0903",
+      "title": "生成对抗网络GAN",
+      "rows": [
+        91
+      ],
+      "kind": "算法",
+      "pre": [
+        "0405",
+        "0901"
+      ],
+      "refs": [
+        [
+          "T18",
+          "Generative Adversarial Networks"
+        ],
+        [
+          "T03",
+          "第20章：GAN 与 DCGAN"
+        ]
+      ],
+      "papers": [
+        "P18"
+      ],
+      "question": "判别信号如何训练生成分布，对抗训练为什么会不稳定？",
+      "focus": [
+        "解释生成器、判别器及交替更新的目标。",
+        "比较常见损失写法、模式坍塌与评价边界，扩写时核对具体变体原文。"
+      ],
+      "diagram": "拟配：两网络对抗与交替参数更新。",
+      "module": "09",
+      "path": "AI/09-生成模型/03-生成对抗网络GAN.md"
+    },
+    {
+      "id": "0904",
+      "title": "归一化流与可逆变换",
+      "rows": [
+        92
+      ],
+      "kind": "算法",
+      "pre": [
+        "0102",
+        "0103",
+        "0901"
+      ],
+      "refs": [
+        [
+          "T18",
+          "Normalizing Flows"
+        ],
+        [
+          "T06",
+          "第3章概率变换背景"
+        ]
+      ],
+      "papers": [
+        "P19"
+      ],
+      "question": "可逆映射如何把简单分布变为复杂分布，并计算精确密度？",
+      "focus": [
+        "解释变量替换公式、Jacobian 行列式与可逆条件。",
+        "以 Real NVP 耦合层说明可计算性和表达能力的权衡。"
+      ],
+      "diagram": "拟配：基础分布到数据分布的可逆映射。",
+      "module": "09",
+      "path": "AI/09-生成模型/04-归一化流与可逆变换.md"
+    },
+    {
+      "id": "0905",
+      "title": "扩散模型与生成评价",
+      "rows": [
+        93,
+        94
+      ],
+      "kind": "算法",
+      "pre": [
+        "0901",
+        "0902",
+        "0505"
+      ],
+      "refs": [
+        [
+          "T18",
+          "Score-based Models 与扩散相关讲义"
+        ],
+        [
+          "T06",
+          "生成模型与评价的概率背景"
+        ]
+      ],
+      "papers": [
+        "P20"
+      ],
+      "question": "逐步加噪如何对应可学习的反向去噪，生成结果应该怎样评价？",
+      "focus": [
+        "展开前向与反向过程、噪声预测目标和条件生成。",
+        "区分质量、多样性与覆盖；引入具体指标时补原始定义与评价条件。"
+      ],
+      "diagram": "拟配：时间步上的加噪/去噪双向流程及训练采样差异。",
+      "module": "09",
+      "path": "AI/09-生成模型/05-扩散模型与生成评价.md"
+    },
+    {
+      "id": "1001",
+      "title": "语言模型语料与分词",
+      "rows": [
+        95
+      ],
+      "kind": "数据",
+      "pre": [
+        "0703",
+        "0507"
+      ],
+      "refs": [
+        [
+          "T19",
+          "Tokenization 与 Data 讲义"
+        ],
+        [
+          "T03",
+          "第15章：Subword Embedding"
+        ]
+      ],
+      "papers": [
+        "P21",
+        "P22"
+      ],
+      "question": "原始文本如何转成训练 Token，数据质量与词表又如何影响学习？",
+      "focus": [
+        "说明清洗、去重、语料污染、Token 与上下文窗口。",
+        "区分 BPE/WordPiece/Unigram 算法和 SentencePiece 工具，补编码解码示例。"
+      ],
+      "diagram": "拟配：原始语料—清洗—子词—Token IDs 流程。",
+      "module": "10",
+      "path": "AI/10-大语言模型/01-语言模型语料与分词.md"
+    },
+    {
+      "id": "1002",
+      "title": "预训练、模型结构与规模规律",
+      "rows": [
+        96
+      ],
+      "kind": "架构",
+      "pre": [
+        "1001",
+        "0507",
+        "0602"
+      ],
+      "refs": [
+        [
+          "T19",
+          "Architectures、Mixture of Experts、Scaling Laws"
+        ],
+        [
+          "T03",
+          "11.9 Large-Scale Pretraining；15.8 BERT"
+        ]
+      ],
+      "papers": [
+        "P12",
+        "P23",
+        "P28"
+      ],
+      "question": "预训练目标与架构如何关联，模型、数据和算力规模应如何共同理解？",
+      "focus": [
+        "对照因果/掩码语言建模、BERT/GPT、稠密/MoE 与困惑度。",
+        "解释规模规律的经验性与实验条件，区分上下文学习、梯度微调与能力评价。"
+      ],
+      "diagram": "拟配：预训练目标与可见范围、稠密/MoE 的结构对照。",
+      "module": "10",
+      "path": "AI/10-大语言模型/02-预训练、模型结构与规模规律.md"
+    },
+    {
+      "id": "1003",
+      "title": "监督微调与参数高效微调",
+      "rows": [
+        97
+      ],
+      "kind": "训练",
+      "pre": [
+        "1002",
+        "0603"
+      ],
+      "refs": [
+        [
+          "T19",
+          "Alignment：Supervised Fine-tuning"
+        ],
+        [
+          "T08",
+          "模型参数与梯度控制的实现基础"
+        ]
+      ],
+      "papers": [
+        "P24",
+        "P25"
+      ],
+      "question": "如何在保留预训练知识的同时学习任务行为，并降低训练资源需求？",
+      "focus": [
+        "解释指令/对话数据、SFT、Adapter、LoRA 与 QLoRA 的更新范围。",
+        "给出低秩矩阵形状、可训练参数量与量化/计算精度的区别。"
+      ],
+      "diagram": "拟配：全量、Adapter、LoRA 与量化基座的参数更新对照。",
+      "module": "10",
+      "path": "AI/10-大语言模型/03-监督微调与参数高效微调.md"
+    },
+    {
+      "id": "1004",
+      "title": "偏好对齐与训练问题",
+      "rows": [
+        98
+      ],
+      "kind": "训练",
+      "pre": [
+        "1003",
+        "0803"
+      ],
+      "refs": [
+        [
+          "T19",
+          "Alignment 与 Safety Alignment"
+        ],
+        [
+          "T02",
+          "误差分析、数据分布与泛化背景"
+        ]
+      ],
+      "papers": [
+        "P26",
+        "P27"
+      ],
+      "question": "偏好数据怎样改变语言模型的训练目标，RLHF 与 DPO 有何关系？",
+      "focus": [
+        "拆分偏好收集、奖励模型、策略优化与参考模型的职责。",
+        "区别 DPO 与在线 RL 的训练流程，说明遗忘、过拟合、泄漏和评估污染。"
+      ],
+      "diagram": "拟配：SFT—RLHF 路径与 DPO 路径的对照。",
+      "module": "10",
+      "path": "AI/10-大语言模型/04-偏好对齐与训练问题.md"
+    },
+    {
+      "id": "1005",
+      "title": "语言模型解码、推理与评估",
+      "rows": [
+        99,
+        100,
+        101
+      ],
+      "kind": "方向",
+      "pre": [
+        "1002",
+        "0204",
+        "0406"
+      ],
+      "refs": [
+        [
+          "T19",
+          "Inference 与 Evaluation 讲义"
+        ],
+        [
+          "T03",
+          "10.8 Beam Search；Transformer 推理相关内容"
+        ]
+      ],
+      "papers": [
+        "P29"
+      ],
+      "question": "解码策略与推理系统如何共同影响输出、延迟、成本和评估结果？",
+      "focus": [
+        "对照 Greedy、Beam、Temperature、Top-k/Top-p 与 Prefill/Decode/KV Cache。",
+        "分开评价知识、推理、代码、幻觉、鲁棒性与安全；说明人工评价及长上下文的条件。"
+      ],
+      "diagram": "拟配：Prefill/Decode 与 KV Cache；采样分布对照。",
+      "module": "10",
+      "path": "AI/10-大语言模型/05-语言模型解码、推理与评估.md"
+    },
+    {
+      "id": "1101",
+      "title": "学习理论、统计解释与高维问题",
+      "rows": [
+        102,
+        103
+      ],
+      "kind": "理论",
+      "pre": [
+        "0203",
+        "0205",
+        "0104"
+      ],
+      "refs": [
+        [
+          "T07",
+          "Learning Theory 与正则化相关讲义"
+        ],
+        [
+          "T06",
+          "第5章：Machine Learning Basics"
+        ]
+      ],
+      "papers": [],
+      "question": "经验误差与样本量、假设空间复杂度之间存在哪些可证明的联系？",
+      "focus": [
+        "定义 PAC、VC 维和样本复杂度，明确概率事件、假设与结论。",
+        "连接 MAP、正则化、稀疏性和维度灾难；不把理论界直接当作实际所需样本数。"
+      ],
+      "diagram": "拟配：假设空间复杂度、样本量与泛化界的概念关系。",
+      "module": "11",
+      "path": "AI/11-理论与概率建模拓展/01-学习理论、统计解释与高维问题.md"
+    },
+    {
+      "id": "1102",
+      "title": "核理论、对偶与二阶优化",
+      "rows": [
+        104,
+        105
+      ],
+      "kind": "理论",
+      "pre": [
+        "0304",
+        "0105"
+      ],
+      "refs": [
+        [
+          "T07",
+          "Representer Theorem；Convex Optimization Overview"
+        ],
+        [
+          "T05",
+          "第7章优化；第12章 SVM"
+        ]
+      ],
+      "papers": [],
+      "question": "核表示、约束优化与二阶信息怎样支持经典模型的求解？",
+      "focus": [
+        "说明 RKHS、核有效性、Lagrange 对偶与 KKT 的使用条件。",
+        "以小型约束问题对照原/对偶形式，再解释 Newton 方法与条件数。"
+      ],
+      "diagram": "拟配：约束几何、原/对偶关系与一阶/二阶更新。",
+      "module": "11",
+      "path": "AI/11-理论与概率建模拓展/02-核理论、对偶与二阶优化.md"
+    },
+    {
+      "id": "1103",
+      "title": "概率图模型与HMM",
+      "rows": [
+        106
+      ],
+      "kind": "理论",
+      "pre": [
+        "0104",
+        "0309",
+        "0506"
+      ],
+      "refs": [
+        [
+          "T06",
+          "第16章：Structured Probabilistic Models"
+        ],
+        [
+          "T07",
+          "Supplementary Notes：Hidden Markov Models"
+        ]
+      ],
+      "papers": [],
+      "question": "图上的条件独立和状态转移如何简化概率建模与推断？",
+      "focus": [
+        "区分 Bayes 网络与 Markov 随机场的图语义。",
+        "定义 HMM 状态、观测、似然、解码与学习问题，并比较 RNN 的状态表示。"
+      ],
+      "diagram": "拟配：有向/无向概率图与 HMM 时间展开。",
+      "module": "11",
+      "path": "AI/11-理论与概率建模拓展/03-概率图模型与HMM.md"
+    },
+    {
+      "id": "1104",
+      "title": "因子分析、ICA与高斯过程",
+      "rows": [
+        107
+      ],
+      "kind": "理论",
+      "pre": [
+        "0102",
+        "0104",
+        "0308",
+        "0309"
+      ],
+      "refs": [
+        [
+          "T07",
+          "Factor Analysis；Independent Components Analysis；Gaussian Processes"
+        ],
+        [
+          "T25",
+          "回归、核与不确定性相关章节"
+        ],
+        [
+          "T06",
+          "第13章：Linear Factor Models"
+        ]
+      ],
+      "papers": [],
+      "question": "不同的潜变量、独立性与函数分布假设各自解释了什么结构？",
+      "focus": [
+        "比较 PCA、因子分析与 ICA 的目标和假设。",
+        "从 GP 先验、核与后验预测说明不确定性，不与单个确定性函数混同。"
+      ],
+      "diagram": "拟配：因子生成图、信号分离与 GP 后验区间。",
+      "module": "11",
+      "path": "AI/11-理论与概率建模拓展/04-因子分析、ICA与高斯过程.md"
+    },
+    {
+      "id": "1105",
+      "title": "模型解释与特征贡献",
+      "rows": [
+        108
+      ],
+      "kind": "理论",
+      "pre": [
+        "0205",
+        "0305"
+      ],
+      "refs": [
+        [
+          "T23",
+          "Permutation Feature Importance；Local Explanations；SHAP"
+        ],
+        [
+          "T09",
+          "Inspection 与 Permutation Importance"
+        ]
+      ],
+      "papers": [
+        "P30"
+      ],
+      "question": "特征重要性与局部解释能回答什么，又不能据此断言什么？",
+      "focus": [
+        "区分全局与局部解释、置换重要性与 SHAP。",
+        "解释基准分布、相关特征和解释方法的假设；不把预测贡献当作因果效应。"
+      ],
+      "diagram": "拟配：全局/局部解释及相关特征导致的歧义。",
+      "module": "11",
+      "path": "AI/11-理论与概率建模拓展/05-模型解释与特征贡献.md"
+    },
+    {
+      "id": "1106",
+      "title": "因果推断基础",
+      "rows": [
+        109
+      ],
+      "kind": "理论",
+      "pre": [
+        "0104",
+        "0201"
+      ],
+      "refs": [
+        [
+          "T24",
+          "Part I：Causal Inference Without Models"
+        ],
+        [
+          "T23",
+          "解释边界与因果问题的对照背景"
+        ]
+      ],
+      "papers": [],
+      "question": "相关关系为何不足以回答干预问题，因果识别需要哪些额外假设？",
+      "focus": [
+        "解释混杂、潜在结果、干预和识别/估计的区别。",
+        "用一个共同原因示例对照观察与干预，明确数据与假设的角色。"
+      ],
+      "diagram": "拟配：混杂、干预与观察的因果图；箭头语义须明确。",
+      "module": "11",
+      "related": [
+        "1105"
+      ],
+      "path": "AI/11-理论与概率建模拓展/06-因果推断基础.md"
+    },
+    {
+      "id": "1201",
+      "title": "数据版本、实验管理与漂移",
+      "rows": [
+        110,
+        111
+      ],
+      "kind": "工程",
+      "pre": [
+        "0205",
+        "0406"
+      ],
+      "refs": [
+        [
+          "T06",
+          "第11章：Practical Methodology"
+        ],
+        [
+          "T03",
+          "4.7 Environment and Distribution Shift"
+        ],
+        [
+          "T19",
+          "Data 与 Evaluation"
+        ]
+      ],
+      "papers": [],
+      "question": "如何把数据、配置、训练产物和线上变化连成可追踪的模型生命周期？",
+      "focus": [
+        "说明数据/模型版本、Checkpoint、恢复、指标和产物记录。",
+        "区分数据漂移与概念漂移，连接训练/服务一致性和更新判断。"
+      ],
+      "diagram": "拟配：数据—训练—评估—服务—监控生命周期。",
+      "module": "12",
+      "path": "AI/12-工程与部署/01-数据版本、实验管理与漂移.md"
+    },
+    {
+      "id": "1202",
+      "title": "模型导出、量化、剪枝与蒸馏",
+      "rows": [
+        112
+      ],
+      "kind": "工程",
+      "pre": [
+        "0406",
+        "0505"
+      ],
+      "refs": [
+        [
+          "T08",
+          "模型保存与官方导出、蒸馏专题入口"
+        ],
+        [
+          "T03",
+          "计算性能相关章节"
+        ]
+      ],
+      "papers": [
+        "P31",
+        "P32"
+      ],
+      "question": "模型的存储、计算与部署成本可以从哪些层面降低？",
+      "focus": [
+        "区分权重保存、导出计算图、算子与推理运行时，介绍 ONNX/TensorRT 的角色。",
+        "比较量化、剪枝、蒸馏的目标与精度—资源权衡；具体部署 API 后续按版本核对。"
+      ],
+      "diagram": "拟配：训练产物到运行时及三类压缩方法。",
+      "module": "12",
+      "path": "AI/12-工程与部署/02-模型导出、量化、剪枝与蒸馏.md"
+    },
+    {
+      "id": "1203",
+      "title": "推理服务与线上监控",
+      "rows": [
+        113
+      ],
+      "kind": "工程",
+      "pre": [
+        "1201",
+        "1202"
+      ],
+      "refs": [
+        [
+          "T19",
+          "Inference 与 Evaluation"
+        ],
+        [
+          "T03",
+          "第13章：Computational Performance"
+        ]
+      ],
+      "papers": [],
+      "question": "模型怎样成为可调用的服务，性能与质量又如何在线上被观察？",
+      "focus": [
+        "说明输入输出契约、批处理、并发与模型更新。",
+        "区分吞吐量、单次/尾延迟、内存与显存；给出评价口径而非无条件性能结论。"
+      ],
+      "diagram": "拟配：请求—批处理—模型—响应与监控指标流。",
+      "module": "12",
+      "path": "AI/12-工程与部署/03-推理服务与线上监控.md"
+    },
+    {
+      "id": "1204",
+      "title": "性能分析与分布式训练",
+      "rows": [
+        114,
+        115,
+        116
+      ],
+      "kind": "工程",
+      "pre": [
+        "0406",
+        "0502",
+        "0507"
+      ],
+      "refs": [
+        [
+          "T03",
+          "第13章：硬件、异步计算与多 GPU"
+        ],
+        [
+          "T19",
+          "GPUs、Kernels、Parallelism 与 Systems"
+        ]
+      ],
+      "papers": [
+        "P29"
+      ],
+      "question": "大模型训练的计算、存储和通信瓶颈如何被定位和分摊？",
+      "focus": [
+        "解释加载/传输/计算的 Profiling，以及 DP/DDP、张量/流水线并行与状态分片。",
+        "说明混合精度、激活重计算与 FlashAttention 的权衡，区分理论复杂度和端到端实测。"
+      ],
+      "diagram": "拟配：并行方式、参数/梯度/状态分布与时间线。",
+      "module": "12",
+      "path": "AI/12-工程与部署/04-性能分析与分布式训练.md"
+    }
+  ],
+  "route_rows": [
+    {
+      "id": 1,
+      "section": "01 基础：概念、数学与编程",
+      "subsection": "1.1 基本概念",
+      "label": "知识范围",
+      "content": "人工智能、机器学习、深度学习的关系：深度学习是机器学习的一类方法，以多层神经网络学习数据表示；学习方式：监督学习、无监督学习、半监督学习、自监督学习、强化学习"
+    },
+    {
+      "id": 2,
+      "section": "01 基础：概念、数学与编程",
+      "subsection": "1.1 基本概念",
+      "label": "任务与对象",
+      "content": "基本任务：回归、分类、聚类、降维、异常检测、排序、生成；基本对象：样本、特征、标签、数据集、模型、参数、超参数"
+    },
+    {
+      "id": 3,
+      "section": "01 基础：概念、数学与编程",
+      "subsection": "1.1 基本概念",
+      "label": "学习过程",
+      "content": "基本过程：训练、验证、测试、推理；训练模型与调用已有模型的区别；核心问题：模型如何表示规律、如何从数据中学习、如何判断对新数据是否有效"
+    },
+    {
+      "id": 4,
+      "section": "01 基础：概念、数学与编程",
+      "subsection": "1.2 数学基础",
+      "label": "线性代数",
+      "content": "标量、向量、矩阵、张量及其形状；向量内积、范数、距离、夹角与余弦相似度；矩阵乘法、转置、逆、秩、线性方程组；线性空间、基、线性变换、正交与投影；特征值与特征向量、正定矩阵、奇异值分解（SVD）"
+    },
+    {
+      "id": 5,
+      "section": "01 基础：概念、数学与编程",
+      "subsection": "1.2 数学基础",
+      "label": "微积分与求导",
+      "content": "函数、极限、导数、偏导数、全微分；梯度、方向导数、Jacobian 矩阵、Hessian 矩阵；链式法则、复合函数求导、向量和矩阵求导；Taylor 展开、极值、驻点、局部最优与全局最优"
+    },
+    {
+      "id": 6,
+      "section": "01 基础：概念、数学与编程",
+      "subsection": "1.2 数学基础",
+      "label": "概率基础",
+      "content": "随机变量、概率分布、联合概率、条件概率、独立性；全概率公式、Bayes 公式；期望、方差、协方差、相关系数；Bernoulli 分布、二项分布、Gaussian 分布、Categorical 分布"
+    },
+    {
+      "id": 7,
+      "section": "01 基础：概念、数学与编程",
+      "subsection": "1.2 数学基础",
+      "label": "统计与估计",
+      "content": "大数定律、中心极限定理、抽样与估计；似然、最大似然估计（MLE）、最大后验估计（MAP）、Bayes 推断；置信区间、假设检验、Bootstrap 的基本思想"
+    },
+    {
+      "id": 8,
+      "section": "01 基础：概念、数学与编程",
+      "subsection": "1.2 数学基础",
+      "label": "优化与数值计算",
+      "content": "目标函数、约束优化、凸集与凸函数；梯度下降、随机梯度下降、Mini-batch 梯度下降；学习率、收敛、局部极值、鞍点、条件数；浮点精度、上溢与下溢、数值稳定性、Log-sum-exp"
+    },
+    {
+      "id": 9,
+      "section": "01 基础：概念、数学与编程",
+      "subsection": "1.2 数学基础",
+      "label": "信息论",
+      "content": "信息量、熵、条件熵、交叉熵；KL 散度、互信息；交叉熵、负对数似然与概率分布拟合的关系"
+    },
+    {
+      "id": 10,
+      "section": "01 基础：概念、数学与编程",
+      "subsection": "1.3 编程与计算环境",
+      "label": "Python",
+      "content": "基本语法、数据结构、函数、类、模块与异常处理；迭代器、生成器、文件读写、包管理与虚拟环境；调试、日志、配置与随机种子"
+    },
+    {
+      "id": 11,
+      "section": "01 基础：概念、数学与编程",
+      "subsection": "1.3 编程与计算环境",
+      "label": "NumPy",
+      "content": "多维数组、索引、广播、向量化、矩阵运算"
+    },
+    {
+      "id": 12,
+      "section": "01 基础：概念、数学与编程",
+      "subsection": "1.3 编程与计算环境",
+      "label": "pandas",
+      "content": "表格数据、缺失值、分组聚合、连接、数据读写"
+    },
+    {
+      "id": 13,
+      "section": "01 基础：概念、数学与编程",
+      "subsection": "1.3 编程与计算环境",
+      "label": "Matplotlib 等绘图库",
+      "content": "分布图、散点图、相关性图、训练曲线"
+    },
+    {
+      "id": 14,
+      "section": "01 基础：概念、数学与编程",
+      "subsection": "1.3 编程与计算环境",
+      "label": "SciPy",
+      "content": "常用统计、优化与科学计算接口"
+    },
+    {
+      "id": 15,
+      "section": "01 基础：概念、数学与编程",
+      "subsection": "1.3 编程与计算环境",
+      "label": "计算环境",
+      "content": "Notebook 与 Python 脚本的使用方式；CPU、GPU、内存与显存的基本区别；依赖环境、数据路径、模型文件与实验配置管理"
+    },
+    {
+      "id": 16,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.1 数据与学习原理",
+      "label": "数据理解",
+      "content": "数据类型：数值、类别、文本、图像、音频、时间序列、图数据；数据分布、统计摘要、可视化与探索性数据分析（EDA）；缺失值、异常值、重复样本、标签噪声与类别不平衡；抽样偏差、标注偏差、分布变化与数据代表性"
+    },
+    {
+      "id": 17,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.1 数据与学习原理",
+      "label": "数据划分与泄漏",
+      "content": "训练集、验证集、测试集的职责；随机划分、分层划分、按组划分、按时间划分；数据泄漏：测试信息、未来信息、重复样本、错误的预处理顺序；预处理参数在训练集上拟合，再应用于验证集和测试集"
+    },
+    {
+      "id": 18,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.1 数据与学习原理",
+      "label": "预处理与特征",
+      "content": "缺失值填补、异常值处理、标准化、归一化；类别编码、One-hot 编码、数值变换、分箱；特征构造、特征选择、特征交互；重采样、类别权重与数据增强；预处理流水线（Pipeline）与训练、推理时的处理一致性"
+    },
+    {
+      "id": 19,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.1 数据与学习原理",
+      "label": "模型与学习目标",
+      "content": "函数拟合、假设空间、模型表达能力与归纳偏置；损失函数、经验风险、期望风险与经验风险最小化；参数学习、超参数选择与模型选择的区别"
+    },
+    {
+      "id": 20,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.1 数据与学习原理",
+      "label": "泛化与正则化",
+      "content": "训练误差、验证误差、测试误差与泛化误差；欠拟合、过拟合、模型复杂度与偏差—方差权衡；正则化：L1、L2、模型复杂度约束"
+    },
+    {
+      "id": 21,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.1 数据与学习原理",
+      "label": "概率建模",
+      "content": "概率建模与判别式模型、生成式模型的区别"
+    },
+    {
+      "id": 22,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.2 评估与模型选择",
+      "label": "回归",
+      "content": "MAE、MSE、RMSE、决定系数 R²"
+    },
+    {
+      "id": 23,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.2 评估与模型选择",
+      "label": "分类",
+      "content": "混淆矩阵、Accuracy、Precision、Recall、F1"
+    },
+    {
+      "id": 24,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.2 评估与模型选择",
+      "label": "分类阈值与曲线",
+      "content": "ROC、AUC、PR 曲线、类别不平衡下的指标选择"
+    },
+    {
+      "id": 25,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.2 评估与模型选择",
+      "label": "概率预测",
+      "content": "Log loss、概率校准与可靠性图"
+    },
+    {
+      "id": 26,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.2 评估与模型选择",
+      "label": "聚类",
+      "content": "轮廓系数、调整兰德指数（ARI）及其适用条件"
+    },
+    {
+      "id": 27,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.2 评估与模型选择",
+      "label": "检索与排序",
+      "content": "Precision@K、Recall@K、MRR、NDCG"
+    },
+    {
+      "id": 28,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.2 评估与模型选择",
+      "label": "验证方法",
+      "content": "留出法、K 折交叉验证、分层交叉验证；分组交叉验证、时间序列验证、嵌套交叉验证"
+    },
+    {
+      "id": 29,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.2 评估与模型选择",
+      "label": "模型选择与调参",
+      "content": "基线模型、学习曲线、验证曲线、误差分析；网格搜索、随机搜索、Bayes 超参数优化"
+    },
+    {
+      "id": 30,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.2 评估与模型选择",
+      "label": "评估可信度",
+      "content": "指标波动、随机种子、置信区间与重复实验；测试集隔离与反复调参造成的评估偏差"
+    },
+    {
+      "id": 31,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.3 监督学习",
+      "label": "线性回归",
+      "content": "线性回归、最小二乘法、闭式解与梯度下降求解；Ridge、Lasso、Elastic Net；多项式回归与非线性特征映射"
+    },
+    {
+      "id": 32,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.3 监督学习",
+      "label": "分类线性模型",
+      "content": "Logistic 回归、Sigmoid、决策边界、二元交叉熵；Softmax 回归、多分类交叉熵；感知机与线性可分性"
+    },
+    {
+      "id": 33,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.3 监督学习",
+      "label": "广义线性模型",
+      "content": "广义线性模型的基本思想"
+    },
+    {
+      "id": 34,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.3 监督学习",
+      "label": "近邻方法",
+      "content": "K 近邻（KNN）、距离度量、维度灾难"
+    },
+    {
+      "id": 35,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.3 监督学习",
+      "label": "概率分类",
+      "content": "Bayes 决策、朴素 Bayes、条件独立假设；线性判别分析（LDA）与二次判别分析（QDA）；朴素 Bayes 的 Laplace 平滑"
+    },
+    {
+      "id": 36,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.3 监督学习",
+      "label": "支持向量机",
+      "content": "支持向量机（SVM）：间隔、软间隔、核技巧与核函数；支持向量回归（SVR）"
+    },
+    {
+      "id": 37,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.3 监督学习",
+      "label": "决策树",
+      "content": "决策树：划分准则、信息增益、Gini 不纯度、回归树、剪枝"
+    },
+    {
+      "id": 38,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.3 监督学习",
+      "label": "集成学习",
+      "content": "Bagging、随机森林、袋外评估（OOB）；Boosting、AdaBoost、梯度提升树（GBDT）"
+    },
+    {
+      "id": 39,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.3 监督学习",
+      "label": "提升树与模型组合",
+      "content": "XGBoost、LightGBM、CatBoost 的核心思想与差异；Voting、Stacking、特征重要性与集成模型的过拟合"
+    },
+    {
+      "id": 40,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.3 监督学习",
+      "label": "scikit-learn",
+      "content": "scikit-learn 的 Estimator、fit、predict、transform 接口；Pipeline、ColumnTransformer、交叉验证与参数搜索；模型保存、加载与预处理对象保存"
+    },
+    {
+      "id": 41,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.4 无监督学习",
+      "label": "聚类",
+      "content": "K-means、层次聚类、DBSCAN；聚类结果解释、距离选择与高维数据问题"
+    },
+    {
+      "id": 42,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.4 无监督学习",
+      "label": "降维",
+      "content": "主成分分析（PCA）、SVD 与低维表示；t-SNE、UMAP 的基本思想与可视化解释边界"
+    },
+    {
+      "id": 43,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.4 无监督学习",
+      "label": "密度估计与隐变量",
+      "content": "参数化密度估计、核密度估计（KDE）；Gaussian 混合模型（GMM）；隐变量、完整数据似然、EM 算法"
+    },
+    {
+      "id": 44,
+      "section": "02 机器学习：数据、原理、评估与算法",
+      "subsection": "2.4 无监督学习",
+      "label": "异常检测",
+      "content": "基于统计分布、距离和密度的异常检测；Isolation Forest、One-class SVM；基于重构误差的异常检测"
+    },
+    {
+      "id": 45,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.1 神经网络与自动微分",
+      "label": "网络与表示",
+      "content": "人工神经元、全连接层、多层感知机（MLP）；权重、偏置、隐藏层、网络深度与宽度；非线性激活：Sigmoid、Tanh、ReLU、GELU；前向传播、张量形状与批量计算；表示学习：从人工特征到可学习特征"
+    },
+    {
+      "id": 46,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.1 神经网络与自动微分",
+      "label": "损失函数",
+      "content": "回归损失、二分类损失、多分类损失；Logits、Sigmoid、Softmax 与损失函数的输入关系"
+    },
+    {
+      "id": 47,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.1 神经网络与自动微分",
+      "label": "反向传播",
+      "content": "计算图、链式法则、反向传播；自动微分、梯度累积与梯度清零；参数更新与训练、验证、推理流程；梯度检验（Gradient Checking）：数值差分与反向传播梯度的比较"
+    },
+    {
+      "id": 48,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.1 神经网络与自动微分",
+      "label": "初始化与梯度问题",
+      "content": "梯度消失、梯度爆炸、激活饱和；参数初始化：Xavier、He 初始化；数据尺度、网络结构与优化过程的关系"
+    },
+    {
+      "id": 49,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.2 PyTorch",
+      "label": "张量计算",
+      "content": "Tensor 创建、索引、广播、拼接、维度变换；数据类型、设备、CPU/GPU 间的数据移动"
+    },
+    {
+      "id": 50,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.2 PyTorch",
+      "label": "自动微分",
+      "content": "requires_grad、backward、detach 与梯度计算控制；计算图的生命周期、原地操作与梯度问题"
+    },
+    {
+      "id": 51,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.2 PyTorch",
+      "label": "模型与数据",
+      "content": "nn.Module、层、参数注册、forward 方法；Dataset、DataLoader、Batch、打乱、采样与数据变换"
+    },
+    {
+      "id": 52,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.2 PyTorch",
+      "label": "训练循环",
+      "content": "损失函数、Optimizer、学习率调度器；梯度清零 → 前向传播 → 损失计算 → 反向传播 → 参数更新；train/eval 模式与 no_grad/inference_mode 的区别"
+    },
+    {
+      "id": 53,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.2 PyTorch",
+      "label": "保存与恢复",
+      "content": "state_dict、Checkpoint、保存与加载、恢复训练"
+    },
+    {
+      "id": 54,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.2 PyTorch",
+      "label": "资源与性能",
+      "content": "模型参数量、张量形状、内存与显存占用；数据加载速度、GPU 利用率、计算瓶颈定位"
+    },
+    {
+      "id": 55,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.3 训练方法与诊断",
+      "label": "优化器与调度",
+      "content": "SGD、Momentum、RMSProp、Adam、AdamW；学习率、Batch size、Epoch、Step 的关系；Warmup、分段衰减、余弦退火；AdaGrad"
+    },
+    {
+      "id": 56,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.3 训练方法与诊断",
+      "label": "梯度与数值",
+      "content": "梯度裁剪、梯度累积、混合精度训练；权重衰减与 L2 正则化的联系和区别"
+    },
+    {
+      "id": 57,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.3 训练方法与诊断",
+      "label": "正则化与网络结构",
+      "content": "Dropout、早停、数据增强、标签平滑；Batch Normalization、Layer Normalization；残差连接、跳跃连接与深层网络优化；训练模式与推理模式下的行为差异"
+    },
+    {
+      "id": 58,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.3 训练方法与诊断",
+      "label": "训练诊断",
+      "content": "损失曲线、训练与验证指标、泛化差距；梯度异常、NaN、数值不稳定、显存不足；类别不平衡、样本难度、标签错误与错误样本分析"
+    },
+    {
+      "id": 59,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.3 训练方法与诊断",
+      "label": "实验分析",
+      "content": "消融实验、对照实验、随机性与可复现性；人类水平基线、可避免偏差、训练与测试分布不匹配、端到端学习的适用条件"
+    },
+    {
+      "id": 60,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.4 CNN、序列模型与 Transformer",
+      "label": "卷积基础",
+      "content": "卷积核、通道、步幅、填充、感受野；池化、局部连接、权重共享、平移等变性；特征图、层次特征、全局平均池化"
+    },
+    {
+      "id": 61,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.4 CNN、序列模型与 Transformer",
+      "label": "卷积结构",
+      "content": "典型结构：LeNet、AlexNet、VGG、ResNet；1×1 卷积、空洞卷积、深度可分离卷积；补充结构：Inception、DenseNet、MobileNet"
+    },
+    {
+      "id": 62,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.4 CNN、序列模型与 Transformer",
+      "label": "序列模型",
+      "content": "序列表示、变长输入、Padding、Mask；RNN、BPTT、长期依赖问题；LSTM、GRU、双向循环网络；Encoder–Decoder、Seq2Seq、Teacher Forcing"
+    },
+    {
+      "id": 63,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.4 CNN、序列模型与 Transformer",
+      "label": "注意力机制",
+      "content": "Query、Key、Value 与加权聚合；点积注意力、缩放点积注意力；Self-attention、Cross-attention、Multi-head Attention；Padding Mask、Causal Mask 与信息可见范围"
+    },
+    {
+      "id": 64,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.4 CNN、序列模型与 Transformer",
+      "label": "Transformer 结构",
+      "content": "Token Embedding、位置编码、前馈网络；注意力、残差连接与归一化的组合；Encoder-only、Decoder-only、Encoder–Decoder 结构"
+    },
+    {
+      "id": 65,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.4 CNN、序列模型与 Transformer",
+      "label": "序列生成与复杂度",
+      "content": "注意力的计算与显存复杂度、长序列问题；自回归生成与训练、推理过程的差异"
+    },
+    {
+      "id": 66,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.5 表示学习与知识迁移",
+      "label": "表示与重构",
+      "content": "Embedding 空间、相似度、语义表示与度量学习；自编码器（Autoencoder）、去噪自编码器"
+    },
+    {
+      "id": 67,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.5 表示学习与知识迁移",
+      "label": "自监督学习",
+      "content": "对比学习、正负样本、对比损失与表示坍塌；掩码建模、预测式学习、自监督预训练任务"
+    },
+    {
+      "id": 68,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.5 表示学习与知识迁移",
+      "label": "迁移与微调",
+      "content": "迁移学习、冻结参数、特征提取与微调；预训练与下游任务、特征提取、线性探测、全量微调"
+    },
+    {
+      "id": 69,
+      "section": "03 深度学习：网络、框架、训练与核心结构",
+      "subsection": "3.5 表示学习与知识迁移",
+      "label": "适应与持续学习",
+      "content": "少样本学习、领域适应与分布偏移；多任务学习、持续学习与灾难性遗忘"
+    },
+    {
+      "id": 70,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.1 计算机视觉与自然语言处理",
+      "label": "图像分类",
+      "content": "图像表示、图像分类、迁移学习、Vision Transformer（ViT）"
+    },
+    {
+      "id": 71,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.1 计算机视觉与自然语言处理",
+      "label": "目标检测",
+      "content": "边界框、IoU、NMS、单阶段与两阶段检测"
+    },
+    {
+      "id": 72,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.1 计算机视觉与自然语言处理",
+      "label": "图像分割",
+      "content": "语义分割、实例分割、U-Net；转置卷积、全卷积网络（FCN）"
+    },
+    {
+      "id": 73,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.1 计算机视觉与自然语言处理",
+      "label": "视觉评价与生成",
+      "content": "视觉任务的数据增强与评估：mAP、mIoU、Dice；神经风格迁移"
+    },
+    {
+      "id": 74,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.1 计算机视觉与自然语言处理",
+      "label": "文本表示",
+      "content": "文本预处理、词袋模型、TF-IDF、词向量与上下文表示；word2vec、GloVe；BERT 等上下文预训练模型"
+    },
+    {
+      "id": 75,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.1 计算机视觉与自然语言处理",
+      "label": "文本任务",
+      "content": "文本分类、命名实体识别、文本匹配、序列标注；机器翻译、摘要、问答、信息抽取"
+    },
+    {
+      "id": 76,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.1 计算机视觉与自然语言处理",
+      "label": "文本检索",
+      "content": "文本检索、双塔模型、重排序与语义相似度"
+    },
+    {
+      "id": 77,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.2 时间序列、语音、推荐、图与多模态",
+      "label": "时间序列",
+      "content": "趋势、季节性、平稳性、滑动窗口、多步预测；自相关、ARIMA 等统计模型与神经网络时序模型；时间顺序验证、未来信息泄漏与预测区间"
+    },
+    {
+      "id": 78,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.2 时间序列、语音、推荐、图与多模态",
+      "label": "语音",
+      "content": "音频采样、频谱、STFT、Mel 频谱、语音识别与语音合成"
+    },
+    {
+      "id": 79,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.2 时间序列、语音、推荐、图与多模态",
+      "label": "推荐系统",
+      "content": "协同过滤、矩阵分解、隐反馈与负采样；召回、排序、重排序、冷启动与曝光偏差；基于内容的推荐、双塔召回与个性化排序"
+    },
+    {
+      "id": 80,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.2 时间序列、语音、推荐、图与多模态",
+      "label": "图学习",
+      "content": "图结构、节点与边表示、消息传递；GCN、GraphSAGE、GAT，节点分类、链接预测与图分类"
+    },
+    {
+      "id": 81,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.2 时间序列、语音、推荐、图与多模态",
+      "label": "多模态表示与对齐",
+      "content": "图像、文本、音频、视频的表示与融合；跨模态对齐、图文对比学习、CLIP"
+    },
+    {
+      "id": 82,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.2 时间序列、语音、推荐、图与多模态",
+      "label": "多模态任务",
+      "content": "多模态输入、跨模态注意力、视觉语言模型；多模态检索、理解与生成的评价方式"
+    },
+    {
+      "id": 83,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.3 强化学习",
+      "label": "基本对象与价值",
+      "content": "Agent、环境、状态、动作、奖励、轨迹；Markov 决策过程（MDP）、策略、回报、折扣因子；状态价值函数、动作价值函数、Bellman 方程"
+    },
+    {
+      "id": 84,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.3 强化学习",
+      "label": "学习与决策",
+      "content": "动态规划、Monte Carlo、时序差分（TD）；探索与利用、On-policy 与 Off-policy；价值迭代与策略迭代"
+    },
+    {
+      "id": 85,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.3 强化学习",
+      "label": "价值方法",
+      "content": "Q-learning、SARSA、DQN、经验回放、目标网络"
+    },
+    {
+      "id": 86,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.3 强化学习",
+      "label": "策略方法",
+      "content": "策略梯度、REINFORCE、Actor–Critic、PPO"
+    },
+    {
+      "id": 87,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.3 强化学习",
+      "label": "拓展与评价",
+      "content": "模型式与无模型强化学习、离线强化学习的基本概念；奖励设计、样本效率、训练稳定性与评价方法"
+    },
+    {
+      "id": 88,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.4 生成模型",
+      "label": "概率基础",
+      "content": "联合分布、条件生成、潜变量与采样"
+    },
+    {
+      "id": 89,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.4 生成模型",
+      "label": "自回归模型",
+      "content": "概率链式分解、逐步生成、采样策略"
+    },
+    {
+      "id": 90,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.4 生成模型",
+      "label": "变分自编码器（VAE）",
+      "content": "变分推断、ELBO、重参数化技巧"
+    },
+    {
+      "id": 91,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.4 生成模型",
+      "label": "生成对抗网络（GAN）",
+      "content": "生成器、判别器、对抗训练、模式坍塌"
+    },
+    {
+      "id": 92,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.4 生成模型",
+      "label": "归一化流（Normalizing Flow）",
+      "content": "可逆变换、变量替换与密度计算"
+    },
+    {
+      "id": 93,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.4 生成模型",
+      "label": "扩散模型（Diffusion Model）",
+      "content": "前向加噪、反向去噪、噪声预测、条件生成"
+    },
+    {
+      "id": 94,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.4 生成模型",
+      "label": "生成评价",
+      "content": "生成质量、多样性、分布覆盖与生成模型评估"
+    },
+    {
+      "id": 95,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.5 大语言模型",
+      "label": "语料与分词",
+      "content": "文本清洗、去重、语料质量与数据污染；Tokenization：BPE、WordPiece、Unigram 算法；SentencePiece 工具及其 BPE/Unigram 支持；词表、Token、上下文窗口与位置表示"
+    },
+    {
+      "id": 96,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.5 大语言模型",
+      "label": "预训练与架构",
+      "content": "因果语言建模、掩码语言建模、预训练目标；语言建模损失、困惑度、模型规模与数据规模；稠密模型与混合专家模型（MoE）的基本思想；BERT 与 GPT 类模型的结构和目标差异；Scaling Laws（规模规律）"
+    },
+    {
+      "id": 97,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.5 大语言模型",
+      "label": "监督微调",
+      "content": "指令数据、对话数据、监督微调（SFT）；参数高效微调（PEFT）、Adapter、LoRA、QLoRA"
+    },
+    {
+      "id": 98,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.5 大语言模型",
+      "label": "偏好对齐与训练问题",
+      "content": "偏好数据、奖励模型、RLHF 与 DPO 的基本思想；灾难性遗忘、过拟合、数据泄漏与评估污染；RLHF 的强化学习基础对应 4.3"
+    },
+    {
+      "id": 99,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.5 大语言模型",
+      "label": "解码",
+      "content": "Temperature、Top-k、Top-p、贪心解码、Beam Search"
+    },
+    {
+      "id": 100,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.5 大语言模型",
+      "label": "推理效率",
+      "content": "Prefill、Decode、KV Cache 与批处理；长上下文、计算量、显存与推理延迟"
+    },
+    {
+      "id": 101,
+      "section": "04 应用与进阶分支",
+      "subsection": "4.5 大语言模型",
+      "label": "能力与安全评价",
+      "content": "知识、推理、代码与任务能力评估；幻觉、鲁棒性、安全性与人工评价"
+    },
+    {
+      "id": 102,
+      "section": "05 理论与概率建模拓展",
+      "subsection": "",
+      "label": "学习理论",
+      "content": "泛化与样本复杂度、PAC 学习与 VC 维的基本概念"
+    },
+    {
+      "id": 103,
+      "section": "05 理论与概率建模拓展",
+      "subsection": "",
+      "label": "统计解释与高维问题",
+      "content": "正则化的统计解释、先验与 MAP 的关系；高维统计、稀疏性、维度灾难"
+    },
+    {
+      "id": 104,
+      "section": "05 理论与概率建模拓展",
+      "subsection": "",
+      "label": "核理论",
+      "content": "核方法与再生核 Hilbert 空间（RKHS）的基本思想"
+    },
+    {
+      "id": 105,
+      "section": "05 理论与概率建模拓展",
+      "subsection": "",
+      "label": "优化理论",
+      "content": "Lagrange 乘子、对偶问题与 KKT 条件的基本概念；Newton 方法与二阶优化"
+    },
+    {
+      "id": 106,
+      "section": "05 理论与概率建模拓展",
+      "subsection": "",
+      "label": "概率图与序列模型",
+      "content": "概率图模型：Bayes 网络、Markov 随机场的基本概念；隐 Markov 模型（HMM）：状态、观测与基本推断问题"
+    },
+    {
+      "id": 107,
+      "section": "05 理论与概率建模拓展",
+      "subsection": "",
+      "label": "补充概率模型",
+      "content": "因子分析、独立成分分析（ICA）、Gaussian 过程（GP）与不确定性估计"
+    },
+    {
+      "id": 108,
+      "section": "05 理论与概率建模拓展",
+      "subsection": "",
+      "label": "模型解释",
+      "content": "可解释性：置换重要性、局部解释、SHAP 的基本思想"
+    },
+    {
+      "id": 109,
+      "section": "05 理论与概率建模拓展",
+      "subsection": "",
+      "label": "因果基础",
+      "content": "相关性与因果性、混杂因素、因果推断基础"
+    },
+    {
+      "id": 110,
+      "section": "06 工程：训练系统、压缩与部署",
+      "subsection": "",
+      "label": "版本与实验",
+      "content": "数据版本、模型版本、配置管理、实验记录；Checkpoint、断点恢复、指标跟踪与产物管理"
+    },
+    {
+      "id": 111,
+      "section": "06 工程：训练系统、压缩与部署",
+      "subsection": "",
+      "label": "流水线与漂移",
+      "content": "数据处理、训练、评估、推理流水线；训练与服务间的数据一致性、数据漂移与概念漂移"
+    },
+    {
+      "id": 112,
+      "section": "06 工程：训练系统、压缩与部署",
+      "subsection": "",
+      "label": "导出与压缩",
+      "content": "模型导出、计算图、算子与推理运行时；ONNX、TensorRT 等模型交换与推理工具的基本概念；量化、剪枝、知识蒸馏"
+    },
+    {
+      "id": 113,
+      "section": "06 工程：训练系统、压缩与部署",
+      "subsection": "",
+      "label": "推理服务",
+      "content": "批处理、并发、吞吐量、延迟、内存和显存占用；服务接口、输入输出校验、线上监控与模型更新"
+    },
+    {
+      "id": 114,
+      "section": "06 工程：训练系统、压缩与部署",
+      "subsection": "",
+      "label": "计算性能",
+      "content": "数据加载、CPU/GPU 数据传输、Profiling；FlashAttention 的计算与显存优化思想"
+    },
+    {
+      "id": 115,
+      "section": "06 工程：训练系统、压缩与部署",
+      "subsection": "",
+      "label": "分布式训练",
+      "content": "数据并行、分布式数据并行（DDP）、梯度同步；张量并行、流水线并行、模型状态分片"
+    },
+    {
+      "id": 116,
+      "section": "06 工程：训练系统、压缩与部署",
+      "subsection": "",
+      "label": "效率与资源权衡",
+      "content": "混合精度、激活重计算、显存优化；计算、存储、通信开销与训练吞吐量的关系"
+    }
+  ],
+  "figure": "AI/assets/figures/ai-knowledge-map.svg"
+}
