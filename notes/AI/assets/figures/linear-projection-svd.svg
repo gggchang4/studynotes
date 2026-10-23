@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">向量投影与 SVD 的几何含义</title>
+  <desc id="desc">左图把向量三、一投影到一、一的方向，投影为二、二，正交残差为一、负一。右图表示 SVD 对列向量依次实施 V 转置、Sigma 与 U。</desc>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#47617c"/></marker><marker id="green" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#258364"/></marker></defs>
+  <style>text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif;fill:#172b44}.h{font-size:31px;font-weight:700}.t{font-size:25px;font-weight:600}.s{font-size:22px;fill:#40546b}.axis{stroke:#9caec1;stroke-width:2}.arr{fill:none;stroke:#47617c;stroke-width:3;marker-end:url(#a)}</style>
+  <rect width="1200" height="640" rx="22" fill="#f8fafc"/>
+  <text x="38" y="57" class="h">把线性运算读成几何变化</text>
+  <rect x="30" y="98" width="525" height="480" rx="18" fill="#fff" stroke="#d7e1eb"/>
+  <text x="55" y="144" class="t">投影：保留指定方向上的分量</text>
+  <line x1="95" y1="448" x2="480" y2="448" class="axis"/><line x1="95" y1="448" x2="95" y2="190" class="axis"/>
+  <text x="482" y="474" class="s">x₁</text><text x="67" y="191" class="s">x₂</text><text x="70" y="475" class="s">0</text>
+  <line x1="95" y1="448" x2="335" y2="208" stroke="#a3cabb" stroke-width="3"/>
+  <text x="346" y="211" class="s">span(u)</text>
+  <path d="M95 448L305 378" class="arr"/>
+  <text x="321" y="392" class="t">x = (3, 1)</text>
+  <path d="M95 448L235 308" fill="none" stroke="#258364" stroke-width="4" marker-end="url(#green)"/>
+  <text x="113" y="282" class="t">p = (2, 2)</text>
+  <line x1="235" y1="308" x2="305" y2="378" stroke="#b97934" stroke-width="3" stroke-dasharray="7 6"/>
+  <path d="M249 294L263 308L249 322" fill="none" stroke="#b97934" stroke-width="2"/>
+  <text x="272" y="307" class="s">x − p = (1, −1)</text>
+  <text x="55" y="519" class="s">u = (1, 1)；uᵀ(x − p) = 0</text>
+  <text x="55" y="552" class="s">投影坐标为 2，投影向量为 2u。</text>
+  <rect x="580" y="98" width="590" height="480" rx="18" fill="#fff" stroke="#d7e1eb"/>
+  <text x="608" y="144" class="t">SVD：A = UΣVᵀ</text>
+  <text x="608" y="182" class="s">对列向量 x，从最右侧的矩阵开始作用。</text>
+  <rect x="612" y="218" width="245" height="68" rx="12" fill="#eaf0fb"/>
+  <text x="734" y="260" class="t" text-anchor="middle">Vᵀ：输入正交变换</text>
+  <path d="M734 286V320" class="arr"/>
+  <rect x="612" y="328" width="245" height="68" rx="12" fill="#e5f4ed"/>
+  <text x="734" y="370" class="t" text-anchor="middle">Σ：按奇异值伸缩</text>
+  <path d="M734 396V430" class="arr"/>
+  <rect x="612" y="438" width="245" height="68" rx="12" fill="#edf0ff"/>
+  <text x="734" y="480" class="t" text-anchor="middle">U：输出正交变换</text>
+  <text x="889" y="258" class="s">d → d</text><text x="889" y="368" class="s">d → m</text><text x="889" y="478" class="s">m → m</text>
+  <text x="608" y="551" class="s">保留大奇异值：得到低秩近似 Aₖ。</text>
+  <text x="38" y="615" class="s">原创教学示意；右图采用完整 SVD 的形状约定，正交变换可能含反射。</text>
+</svg>

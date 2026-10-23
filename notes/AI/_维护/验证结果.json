@@ -1,15 +1,160 @@
 {
-  "stage": "framework",
+  "stage": "mixed",
   "modules": 12,
   "topic_notes": 72,
+  "topic_status_counts": {
+    "reviewed": 14,
+    "framework": 58
+  },
+  "module_states": [
+    {
+      "module": "01",
+      "title": "数学与编程基础",
+      "topics": 8,
+      "status_counts": {
+        "reviewed": 8
+      },
+      "recorded_content_review": {
+        "date": "2026-10-23",
+        "topics": 8,
+        "scope": "概念、维度、公式条件、例子、资料定位与依赖链接复核；非教材全书精读或模型训练实验；按路线逐项补齐线性空间/基、约束优化、假设检验、Bootstrap、条件熵与分组聚合",
+        "numeric_evidence": {
+          "projection_residual_dot": 0,
+          "compound_gradient_max_abs_error": 1.591e-09,
+          "entropy": 0.5623351446188083,
+          "cross_entropy": 0.6931471805599453,
+          "KL": 0.13081203594113697,
+          "stable_LSE": 1001.3132616875182,
+          "CPU_examples": "0107 Centerer; 0108 NumPy/pandas; Python 3.12.14, NumPy 2.3.5, pandas 3.0.1"
+        },
+        "visual_evidence": "2 original SVGs rendered using sharp; light/dark background previews inspected; Obsidian app not exercised"
+      }
+    },
+    {
+      "module": "02",
+      "title": "数据与机器学习基础",
+      "topics": 6,
+      "status_counts": {
+        "reviewed": 6
+      },
+      "recorded_content_review": {
+        "date": "2026-10-23",
+        "topics": 6,
+        "scope": "数据可见性/拟合范围、风险与偏差方差、L1/L2、指标口径、概率校准、CV 与选择偏差逐篇核查；相关论文仅核查指定章节",
+        "numeric_evidence": {
+          "MAE": 0.3333333333333333,
+          "MSE": 0.3333333333333333,
+          "R2": 0.5,
+          "confusion_matrix_accuracy": 0.96,
+          "precision_recall_F1": 0.8,
+          "ranking_AP": 0.8333333333333334,
+          "NDCG_at_3": 0.9197207891481876,
+          "ridge_gradient_max_abs_residual": 1.111e-16,
+          "other": "exact finite-distribution bias-variance identity; soft threshold grid check; conditional entropy chain identity; temperature argmax preservation"
+        },
+        "code_evidence": "Pipeline code block AST syntax checked; sklearn unavailable, imports/fit/predict not run",
+        "visual_evidence": "Reuses module 01 data-flow SVG; no new figure or empirical ROC/PR/calibration curves"
+      }
+    },
+    {
+      "module": "03",
+      "title": "经典机器学习算法",
+      "topics": 10,
+      "status_counts": {
+        "framework": 10
+      },
+      "recorded_content_review": null
+    },
+    {
+      "module": "04",
+      "title": "神经网络与PyTorch",
+      "topics": 6,
+      "status_counts": {
+        "framework": 6
+      },
+      "recorded_content_review": null
+    },
+    {
+      "module": "05",
+      "title": "训练方法与核心结构",
+      "topics": 7,
+      "status_counts": {
+        "framework": 7
+      },
+      "recorded_content_review": null
+    },
+    {
+      "module": "06",
+      "title": "表示学习与迁移",
+      "topics": 3,
+      "status_counts": {
+        "framework": 3
+      },
+      "recorded_content_review": null
+    },
+    {
+      "module": "07",
+      "title": "应用方向",
+      "topics": 9,
+      "status_counts": {
+        "framework": 9
+      },
+      "recorded_content_review": null
+    },
+    {
+      "module": "08",
+      "title": "强化学习",
+      "topics": 3,
+      "status_counts": {
+        "framework": 3
+      },
+      "recorded_content_review": null
+    },
+    {
+      "module": "09",
+      "title": "生成模型",
+      "topics": 5,
+      "status_counts": {
+        "framework": 5
+      },
+      "recorded_content_review": null
+    },
+    {
+      "module": "10",
+      "title": "大语言模型",
+      "topics": 5,
+      "status_counts": {
+        "framework": 5
+      },
+      "recorded_content_review": null
+    },
+    {
+      "module": "11",
+      "title": "理论与概率建模拓展",
+      "topics": 6,
+      "status_counts": {
+        "framework": 6
+      },
+      "recorded_content_review": null
+    },
+    {
+      "module": "12",
+      "title": "工程与部署",
+      "topics": 4,
+      "status_counts": {
+        "framework": 4
+      },
+      "recorded_content_review": null
+    }
+  ],
   "markdown_files": 92,
   "route_topics": 116,
   "mapped_route_topics": 116,
-  "prerequisite_edges": 165,
-  "wiki_links": 1100,
+  "prerequisite_edges": 167,
+  "wiki_links": 1112,
   "materials": 25,
-  "papers": 32,
-  "local_image_references": 1,
+  "papers": 34,
+  "local_image_references": 5,
   "rendered_previews": [
     {
       "background": "light",
@@ -23,10 +168,11 @@
     }
   ],
   "scope": [
-    "Local Markdown links/headings, route coverage, framework outlines, source IDs and prerequisite DAG checked.",
+    "Local Markdown links/headings, route ownership, remaining framework outlines, source IDs, status consistency and prerequisite DAG checked.",
     "External sources were checked through browsing; this script checks URL structure and recorded evidence scope, not live HTTP.",
-    "SVG rendered with sharp 0.35.5 and visually inspected on light/dark backgrounds; Obsidian application theme switching not exercised.",
-    "Detailed prose, code execution and paper-result reproduction are intentionally deferred."
+    "Expanded-note structure and paired display-math delimiters checked; semantic correctness is a separate recorded module review.",
+    "Preview files listed below belong to the original knowledge map. New figure rendering and CPU example runs are recorded in module reviews, not rerun by this script.",
+    "Reviewed means authored lecture text with scoped checks; it does not imply textbook-wide reading, paper reproduction or Obsidian application testing."
   ],
   "errors": []
 }

@@ -1,4 +1,4 @@
-"""Validate the AI Obsidian framework without rewriting any topic notes."""
+"""Validate AI navigation, coverage and recorded authoring states without rewriting notes."""
 from __future__ import annotations
 
 import argparse
@@ -38,6 +38,7 @@ def inside_ai(path: Path) -> bool:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--report", default=str(AI / "_维护" / "验证结果.json"))
+    parser.add_argument("--summary", action="store_true", help="Print compact results; keep the full JSON report.")
     args = parser.parse_args()
     report_path = Path(args.report).resolve()
     if not inside_ai(report_path):
@@ -49,6 +50,7 @@ def main() -> int:
     all_sources = sources["materials"] + sources["papers"]
     source_ids = {s["id"] for s in all_sources}
     errors: list[str] = []
+    statuses: dict[str, str] = {}
     wiki_count = 0
     markdown_count = 0
     image_count = 0
@@ -74,6 +76,7 @@ def main() -> int:
         content = read(path)
         status_match = re.search(r"(?m)^status:\s*(\S+)", content)
         status = status_match.group(1) if status_match else ""
+        statuses[topic["id"]] = status
         if status not in {"framework", "draft", "reviewed"}:
             errors.append(f"Missing/unknown topic status: {topic['id']}")
         source_match = re.search(r"(?m)^sources:\s*(\[.*\])\s*$", content)
@@ -83,6 +86,20 @@ def main() -> int:
             note_sources = []
         if not note_sources:
             errors.append(f"No material references: {topic['id']}")
+        if topic.get("status", status) != status:
+            errors.append(f"Manifest/note status mismatch: {topic['id']}")
+        if status in {"draft", "reviewed"}:
+            for marker in ("框架，待扩写", "## 内容提纲", "## 后续正文重点", "## 教学图示设计"):
+                if marker in content:
+                    errors.append(f"Expanded note retains outline marker {marker}: {topic['id']}")
+            if "> [!abstract]" not in content or "**前置：**" not in content:
+                errors.append(f"Expanded note lacks overview/prerequisite: {topic['id']}")
+            if not re.search(r"(?m)^## .*资料", content):
+                errors.append(f"Expanded note lacks source reading location: {topic['id']}")
+            if not re.search(r"https://", content):
+                errors.append(f"Expanded note lacks direct source link: {topic['id']}")
+            if status == "reviewed" and not re.search(r"(?m)^reviewed:\s*\d{4}-\d{2}-\d{2}", content):
+                errors.append(f"Reviewed note lacks review date: {topic['id']}")
         for sid in note_sources:
             if sid not in source_ids:
                 errors.append(f"Unknown source {sid}: {topic['id']}")
@@ -120,6 +137,8 @@ def main() -> int:
         if "\ufffd" in content:
             errors.append(f"Encoding replacement character: {path.relative_to(AI)}")
         text = prose(content)
+        if len(re.findall(r"(?m)^\$\$\s*$", text)) % 2:
+            errors.append(f"Unpaired display math delimiter: {path.relative_to(AI)}")
         expected_columns = None
         for number, line in enumerate(text.splitlines(), 1):
             if line.startswith("|"):
@@ -191,10 +210,24 @@ def main() -> int:
         width, height = struct.unpack(">II", header[16:24])
         previews.append({"background": theme, "width": width, "height": height})
 
+    status_counts = collections.Counter(statuses.values())
+    module_states = []
+    for module in manifest["modules"]:
+        tids = [t["id"] for t in topics if t["module"] == module["num"]]
+        counts = collections.Counter(statuses.get(tid, "missing") for tid in tids)
+        review = module.get("review")
+        if review and counts.get("reviewed", 0) != len(tids):
+            errors.append(f"Module review includes unfinished topics: {module['num']}")
+        module_states.append({"module": module["num"], "title": module["title"],
+                              "topics": len(tids), "status_counts": dict(counts),
+                              "recorded_content_review": review})
+
     report = {
-        "stage": "framework",
+        "stage": "mixed" if status_counts.get("framework") and status_counts.get("reviewed") else manifest["stage"],
         "modules": len(manifest["modules"]),
         "topic_notes": len(topics),
+        "topic_status_counts": dict(status_counts),
+        "module_states": module_states,
         "markdown_files": markdown_count,
         "route_topics": len(expected_rows),
         "mapped_route_topics": len(route_counts),
@@ -205,15 +238,17 @@ def main() -> int:
         "local_image_references": image_count,
         "rendered_previews": previews,
         "scope": [
-            "Local Markdown links/headings, route coverage, framework outlines, source IDs and prerequisite DAG checked.",
+            "Local Markdown links/headings, route ownership, remaining framework outlines, source IDs, status consistency and prerequisite DAG checked.",
             "External sources were checked through browsing; this script checks URL structure and recorded evidence scope, not live HTTP.",
-            "SVG rendered with sharp 0.35.5 and visually inspected on light/dark backgrounds; Obsidian application theme switching not exercised.",
-            "Detailed prose, code execution and paper-result reproduction are intentionally deferred."
+            "Expanded-note structure and paired display-math delimiters checked; semantic correctness is a separate recorded module review.",
+            "Preview files listed below belong to the original knowledge map. New figure rendering and CPU example runs are recorded in module reviews, not rerun by this script.",
+            "Reviewed means authored lecture text with scoped checks; it does not imply textbook-wide reading, paper reproduction or Obsidian application testing."
         ],
         "errors": errors,
     }
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps(report, ensure_ascii=False, indent=2))
+    printable = {k: report[k] for k in ("stage", "modules", "topic_notes", "topic_status_counts", "route_topics", "mapped_route_topics", "wiki_links", "materials", "papers", "errors")} if args.summary else report
+    print(json.dumps(printable, ensure_ascii=False, indent=2))
     return 1 if errors else 0
 
 

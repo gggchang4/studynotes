@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "checked": "2026-10-21",
-  "limits": "官方目录/书目/摘要入口已核对；未逐章精读或复现实验；软件运行版本后续单独锁定",
+  "checked": "2026-10-23",
+  "limits": "分项记录已读章节与仅核对入口的资料；未通读全部教材，未复现论文；运行状态按专题分别记录",
   "materials": [
     {
       "id": "T01",
@@ -33,8 +33,40 @@
       "version": "英文在线版 1.0.3",
       "url": "https://d2l.ai/",
       "scope": "数学、模型推导、PyTorch 实现及应用",
-      "checked": "2026-10-21",
-      "verification": "官方页面或公开目录已核对；章节全文未逐一阅读"
+      "checked": "2026-10-23",
+      "verification": "所列相关正文/定义已核对；未通读整本教材或全部文档；运行状态见各专题",
+      "readings": [
+        {
+          "location": "Introduction §1.2–1.3",
+          "url": "https://d2l.ai/chapter_introduction/index.html",
+          "checked": "2026-10-23",
+          "status": "相关部分已读"
+        },
+        {
+          "location": "§2.3 Linear Algebra 与 §2.4 Calculus",
+          "url": "https://d2l.ai/chapter_preliminaries/calculus.html",
+          "checked": "2026-10-23",
+          "status": "相关部分已读"
+        },
+        {
+          "location": "§3.6 Generalization 与 §3.7.1 Weight Decay",
+          "url": "https://d2l.ai/chapter_linear-regression/generalization.html",
+          "checked": "2026-10-23",
+          "status": "相关部分已读"
+        },
+        {
+          "location": "§12.3 Gradient Descent",
+          "url": "https://d2l.ai/chapter_optimization/gd.html",
+          "checked": "2026-10-23",
+          "status": "相关部分已读"
+        },
+        {
+          "location": "§22.7.1 MLE、§22.10 估计/检验/区间、§22.11 条件熵/互信息相关部分",
+          "url": "https://d2l.ai/chapter_appendix-mathematics-for-deep-learning/statistics.html",
+          "checked": "2026-10-23",
+          "status": "相关部分已读"
+        }
+      ]
     },
     {
       "id": "T04",
@@ -56,7 +88,8 @@
       "url": "https://mml-book.github.io/",
       "scope": "线性代数、微积分、概率、优化、PCA、GMM、SVM",
       "checked": "2026-10-21",
-      "verification": "官方页面或公开目录已核对；章节全文未逐一阅读"
+      "verification": "官方页面或公开目录已核对；章节全文未逐一阅读",
+      "reading_limit": "2026-10-23 公开 PDF 抓取受大小限制；只作系统补充入口，未标记章节已读"
     },
     {
       "id": "T06",
@@ -66,8 +99,28 @@
       "version": "2016；作者 HTML 版",
       "url": "https://www.deeplearningbook.org/",
       "scope": "基础原理、正则化、优化、概率模型与生成模型",
-      "checked": "2026-10-21",
-      "verification": "官方页面或公开目录已核对；章节全文未逐一阅读"
+      "checked": "2026-10-23",
+      "verification": "所列相关正文/定义已核对；未通读整本教材或全部文档；运行状态见各专题",
+      "readings": [
+        {
+          "location": "§2.7–2.9 分解定义与条件",
+          "url": "https://www.deeplearningbook.org/contents/linear_algebra.html",
+          "checked": "2026-10-23",
+          "status": "相关部分已读"
+        },
+        {
+          "location": "§3.5–3.8 条件/独立/期望及 §3.13 信息论相关正文",
+          "url": "https://www.deeplearningbook.org/contents/prob.html",
+          "checked": "2026-10-23",
+          "status": "相关部分已读"
+        },
+        {
+          "location": "§4.1–4.3 稳定性、条件性、梯度/Hessian 相关正文",
+          "url": "https://www.deeplearningbook.org/contents/numerical.html",
+          "checked": "2026-10-23",
+          "status": "相关部分已读"
+        }
+      ]
     },
     {
       "id": "T07",
@@ -96,11 +149,37 @@
       "short": "scikit-learn 用户指南",
       "title": "scikit-learn User Guide",
       "authors": "scikit-learn 项目",
-      "version": "stable 文档；运行代码时另锁定版本",
+      "version": "stable 访问日快照 2026-10-23（页面显示 1.9.1）；本机未安装运行",
       "url": "https://scikit-learn.org/stable/user_guide.html",
       "scope": "经典模型、预处理、流水线、评估与参数搜索",
-      "checked": "2026-10-21",
-      "verification": "官方页面或公开目录已核对；章节全文未逐一阅读"
+      "checked": "2026-10-23",
+      "verification": "所列相关正文/定义已核对；未通读整本教材或全部文档；运行状态见各专题",
+      "readings": [
+        {
+          "location": "Common pitfalls §12.2，Cross-validation 的 K 折/分组/时间边界",
+          "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+          "checked": "2026-10-23",
+          "status": "相关部分已读"
+        },
+        {
+          "location": "Preprocessing 与 Imputation 的尺度/编码/缺失值相关部分",
+          "url": "https://scikit-learn.org/stable/modules/preprocessing.html",
+          "checked": "2026-10-23",
+          "status": "相关部分已读"
+        },
+        {
+          "location": "Metrics、Calibration、Clustering evaluation 的本文所用定义",
+          "url": "https://scikit-learn.org/stable/modules/calibration.html",
+          "checked": "2026-10-23",
+          "status": "相关部分已读"
+        },
+        {
+          "location": "Compose §8.1.1、§8.1.4，Grid search 与 Model persistence 的相关正文",
+          "url": "https://scikit-learn.org/stable/modules/compose.html",
+          "checked": "2026-10-23",
+          "status": "相关部分已读"
+        }
+      ]
     },
     {
       "id": "T10",
@@ -110,19 +189,35 @@
       "version": "Python 3 在线文档",
       "url": "https://docs.python.org/3/tutorial/",
       "scope": "语法、函数、类、模块、异常与环境",
-      "checked": "2026-10-21",
-      "verification": "官方页面或公开目录已核对；章节全文未逐一阅读"
+      "checked": "2026-10-23",
+      "verification": "所列相关正文/定义已核对；未通读整本教材或全部文档；运行状态见各专题",
+      "readings": [
+        {
+          "location": "3.12 教程第 4、9、12 章中函数、类与环境的相关部分",
+          "url": "https://docs.python.org/3.12/tutorial/venv.html",
+          "checked": "2026-10-23",
+          "status": "相关部分已读"
+        }
+      ]
     },
     {
       "id": "T11",
       "short": "NumPy 入门",
       "title": "NumPy Quickstart",
       "authors": "NumPy 项目",
-      "version": "stable 在线文档",
+      "version": "2.3 文档线；已执行例子使用 NumPy 2.3.5",
       "url": "https://numpy.org/doc/stable/user/quickstart.html",
       "scope": "数组形状、索引、广播与向量化",
-      "checked": "2026-10-21",
-      "verification": "官方页面或公开目录已核对；章节全文未逐一阅读"
+      "checked": "2026-10-23",
+      "verification": "所列相关正文/定义已核对；未通读整本教材或全部文档；运行状态见各专题",
+      "readings": [
+        {
+          "location": "2.3 文档线：Quickstart、Broadcasting、Indexing 相关部分",
+          "url": "https://numpy.org/doc/2.3/user/quickstart.html",
+          "checked": "2026-10-23",
+          "status": "相关部分已读"
+        }
+      ]
     },
     {
       "id": "T12",
@@ -132,8 +227,16 @@
       "version": "在线文档",
       "url": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html",
       "scope": "表格、清洗、统计、连接与读写",
-      "checked": "2026-10-21",
-      "verification": "官方页面或公开目录已核对；章节全文未逐一阅读"
+      "checked": "2026-10-23",
+      "verification": "所列相关正文/定义已核对；未通读整本教材或全部文档；运行状态见各专题",
+      "readings": [
+        {
+          "location": "DataFrame/Series 与列选择；在线教程相关部分",
+          "url": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/01_table_oriented.html",
+          "checked": "2026-10-23",
+          "status": "相关部分已读"
+        }
+      ]
     },
     {
       "id": "T13",
@@ -143,8 +246,16 @@
       "version": "stable 在线文档",
       "url": "https://matplotlib.org/stable/tutorials/index.html",
       "scope": "图表对象、统计图与结果展示",
-      "checked": "2026-10-21",
-      "verification": "官方页面或公开目录已核对；章节全文未逐一阅读"
+      "checked": "2026-10-23",
+      "verification": "所列相关正文/定义已核对；未通读整本教材或全部文档；运行状态见各专题",
+      "readings": [
+        {
+          "location": "Quick start 的 Figure/Axes/Axis 对象分工",
+          "url": "https://matplotlib.org/stable/users/explain/quick_start.html",
+          "checked": "2026-10-23",
+          "status": "相关部分已读"
+        }
+      ]
     },
     {
       "id": "T14",
@@ -154,8 +265,16 @@
       "version": "在线文档",
       "url": "https://docs.scipy.org/doc/scipy/tutorial/index.html",
       "scope": "统计、优化、线性代数与信号处理",
-      "checked": "2026-10-21",
-      "verification": "官方页面或公开目录已核对；章节全文未逐一阅读"
+      "checked": "2026-10-23",
+      "verification": "所列相关正文/定义已核对；未通读整本教材或全部文档；运行状态见各专题",
+      "readings": [
+        {
+          "location": "Linear Algebra 教程的职责与 solve/lstsq 接口",
+          "url": "https://docs.scipy.org/doc/scipy/tutorial/linalg.html",
+          "checked": "2026-10-23",
+          "status": "相关部分已读"
+        }
+      ]
     },
     {
       "id": "T15",
@@ -663,6 +782,34 @@
       "checked": "2026-10-21",
       "verification": "题名、作者、年份及摘要或出版社页面已核对；全文未精读",
       "yearBasis": "首版 arXiv 年份；不等于会议发表年份"
+    },
+    {
+      "id": "P33",
+      "short": "神经网络概率校准",
+      "title": "On Calibration of Modern Neural Networks",
+      "authors": "Chuan Guo、Geoff Pleiss、Yu Sun、Kilian Q. Weinberger",
+      "year": 2017,
+      "url": "https://proceedings.mlr.press/v70/guo17a.html",
+      "focus": "最高类别置信度校准、ECE 与温度缩放",
+      "checked": "2026-10-23",
+      "verification": "正式会议 PDF 的 §2 与 §4.2/式 (9) 相关部分已读；未精读全文或复现实验",
+      "yearBasis": "ICML 2017 / PMLR 70:1321–1330",
+      "read_version": "PMLR 正式 PDF",
+      "read_url": "https://proceedings.mlr.press/v70/guo17a/guo17a.pdf"
+    },
+    {
+      "id": "P34",
+      "short": "模型选择与选择偏差",
+      "title": "On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+      "authors": "Gavin C. Cawley、Nicola L. C. Talbot",
+      "year": 2010,
+      "url": "https://www.jmlr.org/papers/v11/cawley10a.html",
+      "focus": "有限验证样本上的模型选择过拟合、全流程评价与嵌套验证",
+      "checked": "2026-10-23",
+      "verification": "正式期刊 PDF 的 §4 开头、§4.4、§5–5.1 已读；未精读全部算法实验或复现",
+      "yearBasis": "JMLR 11(70):2079–2107，2010",
+      "read_version": "JMLR 正式 PDF",
+      "read_url": "https://www.jmlr.org/papers/volume11/cawley10a/cawley10a.pdf"
     }
   ]
 }

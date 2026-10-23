@@ -2,7 +2,7 @@
   "schema_version": 1,
   "created": "2026-10-21",
   "scope": "AI",
-  "stage": "framework",
+  "stage": "mixed",
   "route": "AI/机器学习与深度学习学习路线.md",
   "modules": [
     {
@@ -10,14 +10,47 @@
       "title": "数学与编程基础",
       "scope": "概念、数学工具与计算环境",
       "layer": "主干",
-      "folder": "01-数学与编程基础"
+      "folder": "01-数学与编程基础",
+      "review": {
+        "date": "2026-10-23",
+        "topics": 8,
+        "scope": "概念、维度、公式条件、例子、资料定位与依赖链接复核；非教材全书精读或模型训练实验；按路线逐项补齐线性空间/基、约束优化、假设检验、Bootstrap、条件熵与分组聚合",
+        "numeric_evidence": {
+          "projection_residual_dot": 0,
+          "compound_gradient_max_abs_error": 1.591e-09,
+          "entropy": 0.5623351446188083,
+          "cross_entropy": 0.6931471805599453,
+          "KL": 0.13081203594113697,
+          "stable_LSE": 1001.3132616875182,
+          "CPU_examples": "0107 Centerer; 0108 NumPy/pandas; Python 3.12.14, NumPy 2.3.5, pandas 3.0.1"
+        },
+        "visual_evidence": "2 original SVGs rendered using sharp; light/dark background previews inspected; Obsidian app not exercised"
+      }
     },
     {
       "num": "02",
       "title": "数据与机器学习基础",
       "scope": "数据、泛化、评估与模型选择",
       "layer": "主干",
-      "folder": "02-数据与机器学习基础"
+      "folder": "02-数据与机器学习基础",
+      "review": {
+        "date": "2026-10-23",
+        "topics": 6,
+        "scope": "数据可见性/拟合范围、风险与偏差方差、L1/L2、指标口径、概率校准、CV 与选择偏差逐篇核查；相关论文仅核查指定章节",
+        "numeric_evidence": {
+          "MAE": 0.3333333333333333,
+          "MSE": 0.3333333333333333,
+          "R2": 0.5,
+          "confusion_matrix_accuracy": 0.96,
+          "precision_recall_F1": 0.8,
+          "ranking_AP": 0.8333333333333334,
+          "NDCG_at_3": 0.9197207891481876,
+          "ridge_gradient_max_abs_residual": 1.111e-16,
+          "other": "exact finite-distribution bias-variance identity; soft threshold grid check; conditional entropy chain identity; temperature argmax preservation"
+        },
+        "code_evidence": "Pipeline code block AST syntax checked; sklearn unavailable, imports/fit/predict not run",
+        "visual_evidence": "Reuses module 01 data-flow SVG; no new figure or empirical ROC/PR/calibration curves"
+      }
     },
     {
       "num": "03",
@@ -103,12 +136,12 @@
       "pre": [],
       "refs": [
         [
-          "T01",
-          "课程1：监督学习与基本概念"
+          "T03",
+          "具体阅读定位见本篇资料段"
         ],
         [
-          "T03",
-          "第1章：Introduction"
+          "T04",
+          "具体阅读定位见本篇资料段"
         ]
       ],
       "papers": [],
@@ -119,7 +152,8 @@
       ],
       "diagram": "拟配：AI、ML、DL 包含关系与训练—推理对照图。",
       "module": "01",
-      "path": "AI/01-数学与编程基础/01-机器学习概念与任务.md"
+      "path": "AI/01-数学与编程基础/01-机器学习概念与任务.md",
+      "status": "reviewed"
     },
     {
       "id": "0102",
@@ -131,12 +165,16 @@
       "pre": [],
       "refs": [
         [
-          "T05",
-          "第2–4章：线性代数、解析几何与矩阵分解"
+          "T03",
+          "具体阅读定位见本篇资料段"
         ],
         [
-          "T03",
-          "2.3 Linear Algebra；数学附录"
+          "T06",
+          "具体阅读定位见本篇资料段"
+        ],
+        [
+          "T05",
+          "具体阅读定位见本篇资料段"
         ]
       ],
       "papers": [],
@@ -147,7 +185,8 @@
       ],
       "diagram": "拟配：向量投影、线性变换与 SVD 的几何示意。",
       "module": "01",
-      "path": "AI/01-数学与编程基础/02-线性代数与矩阵分解.md"
+      "path": "AI/01-数学与编程基础/02-线性代数与矩阵分解.md",
+      "status": "reviewed"
     },
     {
       "id": "0103",
@@ -161,12 +200,16 @@
       ],
       "refs": [
         [
-          "T05",
-          "第5章：Vector Calculus"
+          "T03",
+          "具体阅读定位见本篇资料段"
         ],
         [
-          "T03",
-          "2.4 Calculus；多元微积分附录"
+          "T05",
+          "具体阅读定位见本篇资料段"
+        ],
+        [
+          "T06",
+          "具体阅读定位见本篇资料段"
         ]
       ],
       "papers": [],
@@ -177,7 +220,8 @@
       ],
       "diagram": "拟配：复合函数依赖图与等高线上的梯度方向。",
       "module": "01",
-      "path": "AI/01-数学与编程基础/03-微积分与矩阵求导.md"
+      "path": "AI/01-数学与编程基础/03-微积分与矩阵求导.md",
+      "status": "reviewed"
     },
     {
       "id": "0104",
@@ -188,16 +232,25 @@
       ],
       "kind": "数学",
       "pre": [
-        "0102"
+        "0102",
+        "0103"
       ],
       "refs": [
         [
-          "T05",
-          "第6章：Probability and Distributions"
+          "T03",
+          "具体阅读定位见本篇资料段"
         ],
         [
           "T06",
-          "第3章：Probability and Information Theory"
+          "具体阅读定位见本篇资料段"
+        ],
+        [
+          "T05",
+          "具体阅读定位见本篇资料段"
+        ],
+        [
+          "T04",
+          "第 5 章 Bootstrap 补充入口；本轮未读"
         ]
       ],
       "papers": [],
@@ -208,7 +261,8 @@
       ],
       "diagram": "拟配：概率分布、似然与先验—后验更新对照图。",
       "module": "01",
-      "path": "AI/01-数学与编程基础/04-概率统计与参数估计.md"
+      "path": "AI/01-数学与编程基础/04-概率统计与参数估计.md",
+      "status": "reviewed"
     },
     {
       "id": "0105",
@@ -222,16 +276,16 @@
       ],
       "refs": [
         [
-          "T05",
-          "第7章：Continuous Optimization"
+          "T03",
+          "具体阅读定位见本篇资料段"
         ],
         [
           "T06",
-          "第4章：Numerical Computation"
+          "具体阅读定位见本篇资料段"
         ],
         [
-          "T03",
-          "第12章：Optimization Algorithms"
+          "T05",
+          "具体阅读定位见本篇资料段"
         ]
       ],
       "papers": [],
@@ -242,7 +296,8 @@
       ],
       "diagram": "拟配：损失等高线上的更新轨迹与浮点数值范围示意。",
       "module": "01",
-      "path": "AI/01-数学与编程基础/05-优化与数值计算基础.md"
+      "path": "AI/01-数学与编程基础/05-优化与数值计算基础.md",
+      "status": "reviewed"
     },
     {
       "id": "0106",
@@ -252,16 +307,17 @@
       ],
       "kind": "数学",
       "pre": [
-        "0104"
+        "0104",
+        "0103"
       ],
       "refs": [
         [
           "T06",
-          "第3章：信息论相关内容"
+          "具体阅读定位见本篇资料段"
         ],
         [
           "T03",
-          "22.11 Information Theory"
+          "具体阅读定位见本篇资料段"
         ]
       ],
       "papers": [],
@@ -272,7 +328,8 @@
       ],
       "diagram": "拟配：两个离散分布及三类信息量的关系图。",
       "module": "01",
-      "path": "AI/01-数学与编程基础/06-信息论与概率损失.md"
+      "path": "AI/01-数学与编程基础/06-信息论与概率损失.md",
+      "status": "reviewed"
     },
     {
       "id": "0107",
@@ -286,11 +343,11 @@
       "refs": [
         [
           "T10",
-          "函数、类、模块、异常、虚拟环境"
+          "具体阅读定位见本篇资料段"
         ],
         [
           "T03",
-          "Installation；Jupyter 与 GPU 工具附录"
+          "具体阅读定位见本篇资料段"
         ]
       ],
       "papers": [],
@@ -301,7 +358,8 @@
       ],
       "diagram": "按需配：解释器—环境—依赖关系图；不为普通语法机械配图。",
       "module": "01",
-      "path": "AI/01-数学与编程基础/07-Python与计算环境.md"
+      "path": "AI/01-数学与编程基础/07-Python与计算环境.md",
+      "status": "reviewed"
     },
     {
       "id": "0108",
@@ -320,19 +378,19 @@
       "refs": [
         [
           "T11",
-          "数组、shape、axis、广播与向量化"
+          "具体阅读定位见本篇资料段"
         ],
         [
           "T12",
-          "表格读写、分组与连接"
+          "具体阅读定位见本篇资料段"
         ],
         [
           "T13",
-          "基础绘图与图形对象"
+          "具体阅读定位见本篇资料段"
         ],
         [
           "T14",
-          "统计、优化与线性代数"
+          "具体阅读定位见本篇资料段"
         ]
       ],
       "papers": [],
@@ -343,7 +401,8 @@
       ],
       "diagram": "拟配：数组维度、广播对齐与表格到张量的数据流。",
       "module": "01",
-      "path": "AI/01-数学与编程基础/08-科学计算与可视化.md"
+      "path": "AI/01-数学与编程基础/08-科学计算与可视化.md",
+      "status": "reviewed"
     },
     {
       "id": "0201",
@@ -360,11 +419,11 @@
       "refs": [
         [
           "T09",
-          "Dataset transformations；Preprocessing；Imputation"
+          "具体阅读定位见本篇资料段"
         ],
         [
           "T04",
-          "Statistical Learning 与模型输入相关章节"
+          "具体阅读定位见本篇资料段"
         ]
       ],
       "papers": [],
@@ -375,7 +434,8 @@
       ],
       "diagram": "拟配：原始数据—清洗—特征变换对照图。",
       "module": "02",
-      "path": "AI/02-数据与机器学习基础/01-数据理解与特征工程.md"
+      "path": "AI/02-数据与机器学习基础/01-数据理解与特征工程.md",
+      "status": "reviewed"
     },
     {
       "id": "0202",
@@ -390,11 +450,11 @@
       "refs": [
         [
           "T09",
-          "Cross-validation；Common pitfalls and recommended practices"
+          "具体阅读定位见本篇资料段"
         ],
         [
-          "T02",
-          "课程3：训练、验证、测试分布与误差分析"
+          "T03",
+          "具体阅读定位见本篇资料段"
         ]
       ],
       "papers": [],
@@ -405,7 +465,8 @@
       ],
       "diagram": "拟配：数据集职责图与数据泄漏的错误/正确流程。",
       "module": "02",
-      "path": "AI/02-数据与机器学习基础/02-数据划分与数据泄漏.md"
+      "path": "AI/02-数据与机器学习基础/02-数据划分与数据泄漏.md",
+      "status": "reviewed"
     },
     {
       "id": "0203",
@@ -423,16 +484,16 @@
       ],
       "refs": [
         [
-          "T01",
-          "课程1–2：损失、过拟合、正则化"
+          "T03",
+          "具体阅读定位见本篇资料段"
         ],
         [
           "T04",
-          "Statistical Learning；Linear Model Selection and Regularization"
+          "具体阅读定位见本篇资料段"
         ],
         [
           "T06",
-          "第5、7章"
+          "具体阅读定位见本篇资料段"
         ]
       ],
       "papers": [],
@@ -443,7 +504,8 @@
       ],
       "diagram": "拟配：模型复杂度与拟合曲线、训练/泛化误差关系。",
       "module": "02",
-      "path": "AI/02-数据与机器学习基础/03-学习目标、泛化与正则化.md"
+      "path": "AI/02-数据与机器学习基础/03-学习目标、泛化与正则化.md",
+      "status": "reviewed"
     },
     {
       "id": "0204",
@@ -464,14 +526,12 @@
       "refs": [
         [
           "T09",
-          "Metrics and scoring；Probability calibration"
-        ],
-        [
-          "T01",
-          "课程2：评估与类别不平衡；课程3：推荐"
+          "具体阅读定位见本篇资料段"
         ]
       ],
-      "papers": [],
+      "papers": [
+        "P33"
+      ],
       "question": "面对回归、分类、聚类和排序任务，应当如何解释评价数字？",
       "focus": [
         "用一个混淆矩阵计算分类指标，并比较阈值、ROC 与 PR。",
@@ -479,7 +539,8 @@
       ],
       "diagram": "拟配：混淆矩阵、ROC/PR 曲线与概率可靠性图；曲线须标明数据来源。",
       "module": "02",
-      "path": "AI/02-数据与机器学习基础/04-评估指标与概率校准.md"
+      "path": "AI/02-数据与机器学习基础/04-评估指标与概率校准.md",
+      "status": "reviewed"
     },
     {
       "id": "0205",
@@ -497,15 +558,17 @@
       ],
       "refs": [
         [
-          "T04",
-          "Resampling Methods；模型选择章节"
+          "T09",
+          "具体阅读定位见本篇资料段"
         ],
         [
-          "T09",
-          "Cross-validation；Tuning hyper-parameters；Validation curves"
+          "T04",
+          "具体阅读定位见本篇资料段"
         ]
       ],
-      "papers": [],
+      "papers": [
+        "P34"
+      ],
       "question": "模型比较和调参怎样避免对验证集、测试集逐渐过拟合？",
       "focus": [
         "对比留出、K 折、分组、时间和嵌套验证。",
@@ -513,7 +576,8 @@
       ],
       "diagram": "拟配：嵌套交叉验证的数据流与学习曲线。",
       "module": "02",
-      "path": "AI/02-数据与机器学习基础/05-验证、模型选择与实验可信度.md"
+      "path": "AI/02-数据与机器学习基础/05-验证、模型选择与实验可信度.md",
+      "status": "reviewed"
     },
     {
       "id": "0206",
@@ -530,11 +594,7 @@
       "refs": [
         [
           "T09",
-          "Pipelines and composite estimators；Model persistence"
-        ],
-        [
-          "T01",
-          "课程1：NumPy 与 scikit-learn 实现入口"
+          "具体阅读定位见本篇资料段"
         ]
       ],
       "papers": [],
@@ -545,7 +605,8 @@
       ],
       "diagram": "拟配：训练时 fit 与推理时 transform/predict 的双路径。",
       "module": "02",
-      "path": "AI/02-数据与机器学习基础/06-scikit-learn与Pipeline.md"
+      "path": "AI/02-数据与机器学习基础/06-scikit-learn与Pipeline.md",
+      "status": "reviewed"
     },
     {
       "id": "0301",
@@ -3377,5 +3438,6 @@
       "content": "混合精度、激活重计算、显存优化；计算、存储、通信开销与训练吞吐量的关系"
     }
   ],
-  "figure": "AI/assets/figures/ai-knowledge-map.svg"
+  "figure": "AI/assets/figures/ai-knowledge-map.svg",
+  "updated": "2026-10-23"
 }
