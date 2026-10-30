@@ -1,0 +1,40 @@
+
+/* Minimal Theme — Muted Dark Headings */
+
+.theme-dark {
+  --h1-color: #b18b9d;
+  --h2-color: #849bb8;
+  --h3-color: #8fa999;
+  --h4-color: #b4a184;
+  --h5-color: #9d94b6;
+  --h6-color: #8e9b9e;
+
+  --h1-size: 1.65em;
+  --h2-size: 1.40em;
+  --h3-size: 1.22em;
+  --h4-size: 1.10em;
+  --h5-size: 1.00em;
+  --h6-size: 0.92em;
+
+  --h1-weight: 700;
+  --h2-weight: 675;
+  --h3-weight: 650;
+  --h4-weight: 625;
+  --h5-weight: 600;
+  --h6-weight: 600;
+}
+
+/* 阅读模式：增加章节间距 */
+.theme-dark .markdown-rendered h1 {
+  margin-top: 1.7em;
+}
+
+.theme-dark .markdown-rendered h2 {
+  margin-top: 1.5em;
+}
+
+.theme-dark .markdown-rendered h3 {
+  margin-top: 1.3em;
+}
+
+/* 不额外添加标题背景或边框 */

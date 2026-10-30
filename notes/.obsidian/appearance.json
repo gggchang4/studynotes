@@ -4,6 +4,8 @@
   "accentColor": "#000000",
   "theme": "obsidian",
   "enabledCssSnippets": [
-    "tech-stack-table"
+    "tech-stack-table",
+    "muted-headings",
+    "fonts"
   ]
 }
